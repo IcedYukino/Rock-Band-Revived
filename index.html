@@ -27,7 +27,28 @@ width:100%;
 height:auto;
 }
 
-/* GRID LAYOUT */
+/* SORT BUTTONS */
+
+.controls{
+text-align:center;
+margin-top:10px;
+}
+
+.controls button{
+background:#222;
+border:1px solid #333;
+color:white;
+padding:8px 16px;
+margin:5px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.controls button:hover{
+background:#444;
+}
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -85,7 +106,7 @@ transition:.3s;
 opacity:1;
 }
 
-/* BASIC INFO */
+/* INFO */
 
 .song-info{
 padding:18px;
@@ -102,7 +123,21 @@ color:#bbb;
 font-size:15px;
 }
 
-/* ARROW */
+/* GENRE TAG */
+
+.genre{
+display:inline-block;
+margin-top:8px;
+padding:4px 8px;
+font-size:12px;
+border-radius:6px;
+}
+
+.punk{background:#ff3c3c;}
+.rock{background:#ff9c00;}
+.pop{background:#00aaff;}
+
+/* DROPDOWN */
 
 .arrow{
 font-size:12px;
@@ -114,8 +149,6 @@ transition:transform .25s;
 .song.open .arrow{
 transform:rotate(180deg);
 }
-
-/* DROPDOWN INFO */
 
 .extra-info{
 max-height:0;
@@ -133,33 +166,34 @@ max-height:200px;
 padding:18px;
 }
 
-/* LISTEN LINK */
+/* VIDEO MODAL */
 
-.listen{
-display:inline-block;
-margin-top:10px;
-color:#4da3ff;
-text-decoration:none;
-font-size:14px;
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
 }
 
-.listen:hover{
-text-decoration:underline;
+.modal iframe{
+width:80%;
+height:60%;
+border:none;
 }
 
-/* MOBILE */
-
-@media (max-width:700px){
-
-.grid{
-padding:40px;
-gap:30px;
-}
-
-.logo{
-max-width:260px;
-}
-
+.modal.close{
+cursor:pointer;
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+color:white;
 }
 
 </style>
@@ -170,103 +204,110 @@ max-width:260px;
 
 <header>
 <img src="assets/logo.png" class="logo">
+
+<div class="controls">
+<button onclick="sortArtist()">Sort by Artist</button>
+<button onclick="sortYear()">Sort by Year</button>
+</div>
+
 </header>
 
-<div class="grid">
+<div class="grid" id="songGrid">
 
-<div class="song" onclick="toggleSong(this)">
+<div class="song" data-artist="Ramones" data-year="1978" onclick="toggleSong(this)">
 <img src="covers/needlesandpins.png">
-<div class="play-overlay">▶</div>
+<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/hgCqz3l33kU')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Needles and Pins</div>
 <div class="artist">Ramones</div>
+<div class="genre punk">Punk</div>
 <div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: Road to Ruin<br>
-Year: 1978<br>
-Genre: Punk Rock<br>
-<a class="listen" href="https://youtube.com" target="_blank">Listen on YouTube</a>
+Year: 1978
 </div>
 </div>
 
-<div class="song" onclick="toggleSong(this)">
+<div class="song" data-artist="Lynyrd Skynyrd" data-year="1973" onclick="toggleSong(this)">
 <img src="covers/poisonwhiskey.png">
-<div class="play-overlay">▶</div>
+<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/K2h3G8CRKzU')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Poison Whiskey</div>
 <div class="artist">Lynyrd Skynyrd</div>
+<div class="genre rock">Rock</div>
 <div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
-Album: Pronounced 'Lĕh-'nérd 'Skin-'nérd<br>
-Year: 1973<br>
-Genre: Southern Rock<br>
-<a class="listen" href="https://youtube.com" target="_blank">Listen on YouTube</a>
+Album: Pronounced Leh-nerd Skin-nerd<br>
+Year: 1973
 </div>
 </div>
 
-<div class="song" onclick="toggleSong(this)">
+<div class="song" data-artist="Social Distortion" data-year="2004" onclick="toggleSong(this)">
 <img src="covers/reachforthesky.png">
-<div class="play-overlay">▶</div>
+<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/7xxgRUyzgs0')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Reach for the Sky</div>
 <div class="artist">Social Distortion</div>
+<div class="genre punk">Punk</div>
 <div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
-Album: Sex, Love and Rock 'n' Roll<br>
-Year: 2004<br>
-Genre: Punk Rock<br>
-<a class="listen" href="https://youtube.com" target="_blank">Listen on YouTube</a>
+Album: Sex Love and Rock n Roll<br>
+Year: 2004
 </div>
 </div>
 
-<div class="song" onclick="toggleSong(this)">
+<div class="song" data-artist="Johnny Hates Jazz" data-year="1987" onclick="toggleSong(this)">
 <img src="covers/shattereddreams.png">
-<div class="play-overlay">▶</div>
+<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/ctwqa3QCwMw')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Shattered Dreams</div>
 <div class="artist">Johnny Hates Jazz</div>
+<div class="genre pop">Pop</div>
 <div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: Turn Back the Clock<br>
-Year: 1987<br>
-Genre: Synth Pop<br>
-<a class="listen" href="https://youtube.com" target="_blank">Listen on YouTube</a>
+Year: 1987
 </div>
 </div>
 
-<div class="song" onclick="toggleSong(this)">
+<div class="song" data-artist="Tiny Tim" data-year="1968" onclick="toggleSong(this)">
 <img src="covers/prisoneroflove.png">
-<div class="play-overlay">▶</div>
+<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/zcSlcNfThUA')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Prisoner of Love</div>
 <div class="artist">Tiny Tim</div>
+<div class="genre pop">Pop</div>
 <div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: God Bless Tiny Tim<br>
-Year: 1968<br>
-Genre: Novelty / Traditional Pop<br>
-<a class="listen" href="https://youtube.com" target="_blank">Listen on YouTube</a>
+Year: 1968
 </div>
 </div>
 
+</div>
+
+<div class="modal" id="videoModal" onclick="closeVideo()">
+<iframe id="videoFrame"></iframe>
 </div>
 
 <script>
+
+/* dropdown */
 
 function toggleSong(card){
 
@@ -277,6 +318,58 @@ song.classList.remove("open");
 });
 
 card.classList.toggle("open");
+
+}
+
+/* video */
+
+function playVideo(event,url){
+
+event.stopPropagation();
+
+const modal=document.getElementById("videoModal");
+const frame=document.getElementById("videoFrame");
+
+frame.src=url;
+modal.style.display="flex";
+
+}
+
+function closeVideo(){
+
+const modal=document.getElementById("videoModal");
+const frame=document.getElementById("videoFrame");
+
+modal.style.display="none";
+frame.src="";
+
+}
+
+/* sorting */
+
+function sortArtist(){
+
+const grid=document.getElementById("songGrid");
+const songs=[...grid.children];
+
+songs.sort((a,b)=>
+a.dataset.artist.localeCompare(b.dataset.artist)
+);
+
+songs.forEach(song=>grid.appendChild(song));
+
+}
+
+function sortYear(){
+
+const grid=document.getElementById("songGrid");
+const songs=[...grid.children];
+
+songs.sort((a,b)=>
+a.dataset.year-b.dataset.year
+);
+
+songs.forEach(song=>grid.appendChild(song));
 
 }
 
