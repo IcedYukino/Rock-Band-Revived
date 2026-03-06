@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,33 +17,32 @@ color:white;
 
 header{
 text-align:center;
-padding:50px 20px;
+padding:40px;
 }
 
 .logo{
-max-width:420px;
+max-width:380px;
 width:100%;
-height:auto;
 }
 
-/* SORT BUTTONS */
+/* BUTTONS */
 
 .controls{
 text-align:center;
-margin-top:10px;
+margin-bottom:30px;
 }
 
-.controls button{
+button{
 background:#222;
-border:1px solid #333;
 color:white;
-padding:8px 16px;
+border:none;
+padding:8px 14px;
 margin:5px;
 border-radius:6px;
 cursor:pointer;
 }
 
-.controls button:hover{
+button:hover{
 background:#444;
 }
 
@@ -52,325 +50,219 @@ background:#444;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-gap:50px;
-padding:80px;
-max-width:1600px;
-margin:40px auto;
+grid-template-columns:repeat(8,1fr);
+gap:25px;
+padding:40px;
+max-width:2200px;
+margin:auto;
 }
 
 /* SONG CARD */
 
 .song{
 background:#1a1a1a;
-border-radius:14px;
+border-radius:10px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.6);
-transition:transform .25s, box-shadow .25s;
+box-shadow:0 6px 14px rgba(0,0,0,0.6);
+transition:transform .2s;
 cursor:pointer;
-position:relative;
 }
 
 .song:hover{
 transform:scale(1.05);
-box-shadow:0 18px 40px rgba(0,0,0,0.8);
 }
 
 .song img{
 width:100%;
 aspect-ratio:1/1;
 object-fit:cover;
-display:block;
 }
 
-/* PLAY BUTTON */
-
-.play-overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:rgba(0,0,0,.6);
-border-radius:50%;
-width:80px;
-height:80px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-opacity:0;
-transition:.3s;
-}
-
-.song:hover .play-overlay{
-opacity:1;
-}
-
-/* INFO */
+/* SONG INFO */
 
 .song-info{
-padding:18px;
+padding:12px;
 }
 
 .song-title{
-font-size:20px;
+font-size:16px;
 font-weight:bold;
-margin-bottom:6px;
+margin-bottom:4px;
 }
 
 .artist{
+font-size:14px;
 color:#bbb;
-font-size:15px;
 }
-
-/* GENRE TAG */
-
-.genre{
-display:inline-block;
-margin-top:8px;
-padding:4px 8px;
-font-size:12px;
-border-radius:6px;
-}
-
-.punk{background:#ff3c3c;}
-.rock{background:#ff9c00;}
-.pop{background:#00aaff;}
 
 /* DROPDOWN */
-
-.arrow{
-font-size:12px;
-color:#888;
-margin-top:8px;
-transition:transform .25s;
-}
-
-.song.open .arrow{
-transform:rotate(180deg);
-}
 
 .extra-info{
 max-height:0;
 overflow:hidden;
-transition:max-height .35s ease;
+transition:max-height .3s ease;
 background:#0e0e0e;
-padding:0 18px;
-font-size:14px;
-color:#ccc;
-border-top:1px solid #2a2a2a;
+font-size:13px;
+padding:0 12px;
 }
 
 .song.open .extra-info{
 max-height:200px;
-padding:18px;
+padding:12px;
 }
 
-/* VIDEO MODAL */
-
-.modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.85);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:999;
+.listen{
+color:#4da3ff;
+text-decoration:none;
 }
 
-.modal iframe{
-width:80%;
-height:60%;
-border:none;
+.listen:hover{
+text-decoration:underline;
 }
 
-.modal.close{
-cursor:pointer;
-position:absolute;
-top:20px;
-right:30px;
-font-size:30px;
-color:white;
+/* MOBILE */
+
+@media (max-width:1200px){
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+@media (max-width:700px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 <img src="assets/logo.png" class="logo">
+</header>
 
 <div class="controls">
 <button onclick="sortArtist()">Sort by Artist</button>
 <button onclick="sortYear()">Sort by Year</button>
 </div>
 
-</header>
-
 <div class="grid" id="songGrid">
 
-<div class="song" data-artist="Ramones" data-year="1978" onclick="toggleSong(this)">
+<div class="song" onclick="toggleSong(this)" data-artist="Ramones" data-year="1978">
 <img src="covers/needlesandpins.png">
-<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/hgCqz3l33kU')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Needles and Pins</div>
 <div class="artist">Ramones</div>
-<div class="genre punk">Punk</div>
-<div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: Road to Ruin<br>
-Year: 1978
+Year: 1978<br>
+Genre: Punk Rock<br>
+<a class="listen" href="https://youtube.com" target="_blank">Listen</a>
 </div>
 </div>
 
-<div class="song" data-artist="Lynyrd Skynyrd" data-year="1973" onclick="toggleSong(this)">
+<div class="song" onclick="toggleSong(this)" data-artist="Lynyrd Skynyrd" data-year="1973">
 <img src="covers/poisonwhiskey.png">
-<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/K2h3G8CRKzU')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Poison Whiskey</div>
 <div class="artist">Lynyrd Skynyrd</div>
-<div class="genre rock">Rock</div>
-<div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
-Album: (pronounced 'leh-'nérd 'skin-'nérd)<br>
-Year: 1973
+Album: Pronounced 'Lĕh-'nérd 'Skin-'nérd<br>
+Year: 1973<br>
+Genre: Southern Rock<br>
+<a class="listen" href="https://youtube.com" target="_blank">Listen</a>
 </div>
 </div>
 
-<div class="song" data-artist="Social Distortion" data-year="2004" onclick="toggleSong(this)">
+<div class="song" onclick="toggleSong(this)" data-artist="Social Distortion" data-year="2004">
 <img src="covers/reachforthesky.png">
-<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/7xxgRUyzgs0')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Reach for the Sky</div>
 <div class="artist">Social Distortion</div>
-<div class="genre punk">Punk</div>
-<div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: Sex, Love and Rock 'n' Roll<br>
-Year: 2004
+Year: 2004<br>
+Genre: Punk Rock<br>
+<a class="listen" href="https://youtube.com" target="_blank">Listen</a>
 </div>
 </div>
 
-<div class="song" data-artist="Johnny Hates Jazz" data-year="1988" onclick="toggleSong(this)">
+<div class="song" onclick="toggleSong(this)" data-artist="Johnny Hates Jazz" data-year="1987">
 <img src="covers/shattereddreams.png">
-<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/ctwqa3QCwMw')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Shattered Dreams</div>
 <div class="artist">Johnny Hates Jazz</div>
-<div class="genre pop">Pop</div>
-<div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: Turn Back the Clock<br>
-Year: 1988
+Year: 1987<br>
+Genre: New Wave<br>
+<a class="listen" href="https://youtube.com" target="_blank">Listen</a>
 </div>
 </div>
 
-<div class="song" data-artist="Tiny Tim" data-year="1986" onclick="toggleSong(this)">
+<div class="song" onclick="toggleSong(this)" data-artist="Tiny Tim" data-year="1968">
 <img src="covers/prisoneroflove.png">
-<div class="play-overlay" onclick="playVideo(event,'https://www.youtube.com/embed/zcSlcNfThUA')">▶</div>
 
 <div class="song-info">
 <div class="song-title">Prisoner of Love</div>
 <div class="artist">Tiny Tim</div>
-<div class="genre pop">Pop</div>
-<div class="arrow">▼</div>
 </div>
 
 <div class="extra-info">
 Album: God Bless Tiny Tim<br>
-Year: 1986
+Year: 1968<br>
+Genre: Other<br>
+<a class="listen" href="https://youtube.com" target="_blank">Listen</a>
 </div>
 </div>
 
-</div>
-
-<div class="modal" id="videoModal" onclick="closeVideo()">
-<iframe id="videoFrame"></iframe>
 </div>
 
 <script>
 
-/* dropdown */
-
 function toggleSong(card){
-
 document.querySelectorAll(".song").forEach(song=>{
 if(song !== card){
 song.classList.remove("open");
 }
 });
-
 card.classList.toggle("open");
-
 }
-
-/* video */
-
-function playVideo(event,url){
-
-event.stopPropagation();
-
-const modal=document.getElementById("videoModal");
-const frame=document.getElementById("videoFrame");
-
-frame.src=url;
-modal.style.display="flex";
-
-}
-
-function closeVideo(){
-
-const modal=document.getElementById("videoModal");
-const frame=document.getElementById("videoFrame");
-
-modal.style.display="none";
-frame.src="";
-
-}
-
-/* sorting */
 
 function sortArtist(){
-
-const grid=document.getElementById("songGrid");
-const songs=[...grid.children];
+let grid=document.getElementById("songGrid");
+let songs=[...grid.children];
 
 songs.sort((a,b)=>
 a.dataset.artist.localeCompare(b.dataset.artist)
 );
 
 songs.forEach(song=>grid.appendChild(song));
-
 }
 
 function sortYear(){
-
-const grid=document.getElementById("songGrid");
-const songs=[...grid.children];
+let grid=document.getElementById("songGrid");
+let songs=[...grid.children];
 
 songs.sort((a,b)=>
-a.dataset.year-b.dataset.year
+a.dataset.year - b.dataset.year
 );
 
 songs.forEach(song=>grid.appendChild(song));
-
 }
 
 </script>
