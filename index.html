@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Music</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0d0d0d;
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:40px;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.song{
+    background:#181818;
+    border-radius:12px;
+    overflow:hidden;
+    transition:transform .2s;
+    cursor:pointer;
+}
+
+.song:hover{
+    transform:scale(1.05);
+}
+
+.song img{
+    width:100%;
+    display:block;
+}
+
+.song-info{
+    padding:15px;
+}
+
+.song-title{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.listen{
+    margin-top:8px;
+    font-size:14px;
+    color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>My Songs</header>
+
+<div class="grid">
+
+<div class="song">
+<a href="https://youtube.com" target="_blank">
+<img src="covers/needles.jpg">
+<div class="song-info">
+<div class="song-title">Needles and Pins</div>
+<div class="listen">Listen →</div>
+</div>
+</a>
+</div>
+
+<div class="song">
+<a href="https://youtube.com" target="_blank">
+<img src="covers/poison.jpg">
+<div class="song-info">
+<div class="song-title">Poison Whiskey</div>
+<div class="listen">Listen →</div>
+</div>
+</a>
+</div>
+
+<div class="song">
+<a href="https://youtube.com" target="_blank">
+<img src="covers/reach.jpg">
+<div class="song-info">
+<div class="song-title">Reach for the Sky</div>
+<div class="listen">Listen →</div>
+</div>
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
