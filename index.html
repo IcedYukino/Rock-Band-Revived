@@ -1,180 +1,116 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Setlist</title>
+<title>Rock Band Revived</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background: radial-gradient(circle at top,#1a1a1a,#000);
+background:#111;
 color:white;
 }
 
 header{
 text-align:center;
-padding:30px;
+padding:40px 20px;
 font-size:32px;
 font-weight:bold;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 padding:60px;
-max-width:1400px;
-margin:auto;
+max-width:1100px;
+margin:40px auto;
 }
 
 .song{
-position:relative;
+background:#1a1a1a;
+border-radius:12px;
 overflow:hidden;
-border-radius:16px;
-background:#181818;
-transition:transform .25s ease;
-box-shadow:0 10px 25px rgba(0,0,0,.5);
+box-shadow:0 4px 12px rgba(0,0,0,0.5);
+transition:transform 0.2s;
 }
 
 .song:hover{
-transform:scale(1.05);
+transform:scale(1.03);
 }
 
 .song img{
 width:100%;
-height:320px;
+aspect-ratio:1/1;
 object-fit:cover;
 display:block;
 }
 
 .song-info{
-padding:16px;
+padding:15px;
 }
 
 .song-title{
 font-size:18px;
 font-weight:bold;
+margin-bottom:6px;
 }
 
-.listen{
+.artist{
+color:#bbb;
 font-size:14px;
-color:#aaa;
-}
-
-.play-overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:rgba(0,0,0,.6);
-border-radius:50%;
-width:70px;
-height:70px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-opacity:0;
-transition:.3s;
-}
-
-.song:hover .play-overlay{
-opacity:1;
-}
-
-a{
-color:inherit;
-text-decoration:none;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>Setlist</header>
+<header>Rock Band Revived</header>
 
 <div class="grid">
 
-<a href="https://youtube.com" target="_blank">
 <div class="song">
-
-<img src="covers/shattereddreams.png">
-
-<div class="play-overlay">▶</div>
-
-<div class="song-info">
-<div class="song-title">Shattered Dreams</div>
-<div class="listen">Listen →</div>
-</div>
-
-</div>
-</a>
-
-<a href="https://youtube.com" target="_blank">
-<div class="song">
-
 <img src="covers/needlesandpins.png">
-
-<div class="play-overlay">▶</div>
-
 <div class="song-info">
 <div class="song-title">Needles and Pins</div>
-<div class="listen">Listen →</div>
+<div class="artist">Ramones</div>
+</div>
 </div>
 
-</div>
-</a>
-
-<a href="https://youtube.com" target="_blank">
 <div class="song">
-
 <img src="covers/poisonwhiskey.png">
-
-<div class="play-overlay">▶</div>
-
 <div class="song-info">
 <div class="song-title">Poison Whiskey</div>
-<div class="listen">Listen →</div>
+<div class="artist">Lynyrd Skynyrd</div>
+</div>
 </div>
 
-</div>
-</a>
-
-<a href="https://youtube.com" target="_blank">
 <div class="song">
-
 <img src="covers/reachforthesky.png">
-
-<div class="play-overlay">▶</div>
-
 <div class="song-info">
 <div class="song-title">Reach for the Sky</div>
-<div class="listen">Listen →</div>
+<div class="artist">Social Distortion</div>
+</div>
 </div>
 
-</div>
-</a>
-
-<a href="https://youtube.com" target="_blank">
 <div class="song">
+<img src="covers/shattereddreams.png">
+<div class="song-info">
+<div class="song-title">Shattered Dreams</div>
+<div class="artist">Johnny Hates Jazz</div>
+</div>
+</div>
 
+<div class="song">
 <img src="covers/prisoneroflove.png">
-
-<div class="play-overlay">▶</div>
-
 <div class="song-info">
 <div class="song-title">Prisoner of Love</div>
-<div class="listen">Listen →</div>
+<div class="artist">Tiny Tim</div>
 </div>
-
 </div>
-</a>
 
 </div>
 
