@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -39,6 +40,7 @@ border-radius:12px;
 overflow:hidden;
 box-shadow:0 4px 12px rgba(0,0,0,0.5);
 transition:transform 0.2s;
+cursor:pointer;
 }
 
 .song:hover{
@@ -67,58 +69,107 @@ color:#bbb;
 font-size:14px;
 }
 
+/* DROPDOWN INFO */
+
+.extra-info{
+max-height:0;
+overflow:hidden;
+transition:max-height .35s ease;
+background:#151515;
+padding:0 15px;
+font-size:14px;
+color:#ccc;
+}
+
+.song.open .extra-info{
+max-height:200px;
+padding:15px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <img src="assets/logo.png" alt="Site Logo" class="logo">
+<img src="assets/logo.png" alt="Site Logo" class="logo">
 </header>
 
 <div class="grid">
 
-<div class="song">
+<div class="song" onclick="toggleSong(this)">
 <img src="covers/needlesandpins.png">
 <div class="song-info">
 <div class="song-title">Needles and Pins</div>
 <div class="artist">Ramones</div>
 </div>
+<div class="extra-info">
+<p><b>Album:</b> Road to Ruin</p>
+<p><b>Year:</b> 1978</p>
+<p><b>Genre:</b> Punk Rock</p>
+</div>
 </div>
 
-<div class="song">
+<div class="song" onclick="toggleSong(this)">
 <img src="covers/poisonwhiskey.png">
 <div class="song-info">
 <div class="song-title">Poison Whiskey</div>
 <div class="artist">Lynyrd Skynyrd</div>
 </div>
+<div class="extra-info">
+<p><b>Album:</b> Pronounced 'Lĕh-'nérd 'Skin-'nérd</p>
+<p><b>Year:</b> 1973</p>
+<p><b>Genre:</b> Southern Rock</p>
+</div>
 </div>
 
-<div class="song">
+<div class="song" onclick="toggleSong(this)">
 <img src="covers/reachforthesky.png">
 <div class="song-info">
 <div class="song-title">Reach for the Sky</div>
 <div class="artist">Social Distortion</div>
 </div>
+<div class="extra-info">
+<p><b>Album:</b> Sex, Love and Rock 'n' Roll</p>
+<p><b>Year:</b> 2004</p>
+<p><b>Genre:</b> Punk Rock</p>
+</div>
 </div>
 
-<div class="song">
+<div class="song" onclick="toggleSong(this)">
 <img src="covers/shattereddreams.png">
 <div class="song-info">
 <div class="song-title">Shattered Dreams</div>
 <div class="artist">Johnny Hates Jazz</div>
 </div>
+<div class="extra-info">
+<p><b>Album:</b> Turn Back the Clock</p>
+<p><b>Year:</b> 1987</p>
+<p><b>Genre:</b> Synth Pop</p>
+</div>
 </div>
 
-<div class="song">
+<div class="song" onclick="toggleSong(this)">
 <img src="covers/prisoneroflove.png">
 <div class="song-info">
 <div class="song-title">Prisoner of Love</div>
 <div class="artist">Tiny Tim</div>
 </div>
+<div class="extra-info">
+<p><b>Album:</b> God Bless Tiny Tim</p>
+<p><b>Year:</b> 1968</p>
+<p><b>Genre:</b> Novelty / Traditional Pop</p>
+</div>
 </div>
 
 </div>
+
+<script>
+function toggleSong(card){
+card.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
