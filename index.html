@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Setlist</title>
+<title>My Setlist</title>
 
 <style>
 
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0d0d0d;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(180deg,#050505,#121212);
     color:white;
 }
 
 header{
     text-align:center;
-    padding:40px;
-    font-size:40px;
+    padding:30px;
+    font-size:32px;
     font-weight:bold;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
     padding:40px;
     max-width:1200px;
     margin:auto;
 }
 
 .song{
-    background:#181818;
-    border-radius:12px;
+    position:relative;
     overflow:hidden;
-    transition:transform .2s;
-    cursor:pointer;
+    border-radius:14px;
+    background:#181818;
+    transition:transform .25s ease;
 }
 
 .song:hover{
@@ -43,6 +43,8 @@ header{
 
 .song img{
     width:100%;
+    height:260px;
+    object-fit:cover;
     display:block;
 }
 
@@ -56,9 +58,36 @@ header{
 }
 
 .listen{
-    margin-top:8px;
     font-size:14px;
     color:#aaa;
+}
+
+/* PLAY BUTTON */
+
+.play-overlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.6);
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    opacity:0;
+    transition:.3s;
+}
+
+.song:hover .play-overlay{
+    opacity:1;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 </style>
@@ -70,16 +99,70 @@ header{
 
 <div class="grid">
 
-<div class="song">
 <a href="https://youtube.com" target="_blank">
-<img src="covers/Johnny Hates Jazz - Turn Back the Clock.png">
+<div class="song">
+
+<img src="covers/shattered.jpg">
+
+<div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Shattered Dreams</div>
 <div class="listen">Listen →</div>
 </div>
+
+</div>
 </a>
+
+
+<a href="https://youtube.com" target="_blank">
+<div class="song">
+
+<img src="covers/needles.jpg">
+
+<div class="play-overlay">▶</div>
+
+<div class="song-info">
+<div class="song-title">Needles and Pins</div>
+<div class="listen">Listen →</div>
 </div>
 
+</div>
+</a>
+
+
+<a href="https://youtube.com" target="_blank">
+<div class="song">
+
+<img src="covers/poison.jpg">
+
+<div class="play-overlay">▶</div>
+
+<div class="song-info">
+<div class="song-title">Poison Whiskey</div>
+<div class="listen">Listen →</div>
+</div>
+
+</div>
+</a>
+
+
+<a href="https://youtube.com" target="_blank">
+<div class="song">
+
+<img src="covers/reach.jpg">
+
+<div class="play-overlay">▶</div>
+
+<div class="song-info">
+<div class="song-title">Reach for the Sky</div>
+<div class="listen">Listen →</div>
+</div>
+
+</div>
+</a>
+
+</div>
 
 </body>
 </html>
