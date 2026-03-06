@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,39 +14,45 @@ background:radial-gradient(circle at top,#1b1b1b,#070707);
 color:white;
 }
 
+/* HEADER */
+
 header{
 text-align:center;
-padding:40px 20px;
+padding:50px 20px;
 }
 
 .logo{
-max-width:300px;
+max-width:420px;
 width:100%;
 height:auto;
 }
 
+/* GRID LAYOUT */
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-padding:60px;
-max-width:1100px;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:50px;
+padding:80px;
+max-width:1600px;
 margin:40px auto;
 }
 
+/* SONG CARD */
+
 .song{
 background:#1a1a1a;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,0.5);
+box-shadow:0 8px 20px rgba(0,0,0,0.6);
 transition:transform .25s, box-shadow .25s;
 cursor:pointer;
 position:relative;
 }
 
 .song:hover{
-transform:scale(1.04);
-box-shadow:0 12px 30px rgba(0,0,0,0.7);
+transform:scale(1.05);
+box-shadow:0 18px 40px rgba(0,0,0,0.8);
 }
 
 .song img{
@@ -55,6 +62,8 @@ object-fit:cover;
 display:block;
 }
 
+/* PLAY BUTTON */
+
 .play-overlay{
 position:absolute;
 top:50%;
@@ -62,12 +71,12 @@ left:50%;
 transform:translate(-50%,-50%);
 background:rgba(0,0,0,.6);
 border-radius:50%;
-width:70px;
-height:70px;
+width:80px;
+height:80px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:28px;
+font-size:30px;
 opacity:0;
 transition:.3s;
 }
@@ -76,20 +85,24 @@ transition:.3s;
 opacity:1;
 }
 
+/* BASIC INFO */
+
 .song-info{
-padding:15px;
+padding:18px;
 }
 
 .song-title{
-font-size:18px;
+font-size:20px;
 font-weight:bold;
 margin-bottom:6px;
 }
 
 .artist{
 color:#bbb;
-font-size:14px;
+font-size:15px;
 }
+
+/* ARROW */
 
 .arrow{
 font-size:12px;
@@ -102,12 +115,14 @@ transition:transform .25s;
 transform:rotate(180deg);
 }
 
+/* DROPDOWN INFO */
+
 .extra-info{
 max-height:0;
 overflow:hidden;
 transition:max-height .35s ease;
 background:#0e0e0e;
-padding:0 15px;
+padding:0 18px;
 font-size:14px;
 color:#ccc;
 border-top:1px solid #2a2a2a;
@@ -115,8 +130,10 @@ border-top:1px solid #2a2a2a;
 
 .song.open .extra-info{
 max-height:200px;
-padding:15px;
+padding:18px;
 }
+
+/* LISTEN LINK */
 
 .listen{
 display:inline-block;
@@ -130,7 +147,23 @@ font-size:14px;
 text-decoration:underline;
 }
 
+/* MOBILE */
+
+@media (max-width:700px){
+
+.grid{
+padding:40px;
+gap:30px;
+}
+
+.logo{
+max-width:260px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -144,6 +177,7 @@ text-decoration:underline;
 <div class="song" onclick="toggleSong(this)">
 <img src="covers/needlesandpins.png">
 <div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Needles and Pins</div>
 <div class="artist">Ramones</div>
@@ -161,6 +195,7 @@ Genre: Punk Rock<br>
 <div class="song" onclick="toggleSong(this)">
 <img src="covers/poisonwhiskey.png">
 <div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Poison Whiskey</div>
 <div class="artist">Lynyrd Skynyrd</div>
@@ -178,6 +213,7 @@ Genre: Southern Rock<br>
 <div class="song" onclick="toggleSong(this)">
 <img src="covers/reachforthesky.png">
 <div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Reach for the Sky</div>
 <div class="artist">Social Distortion</div>
@@ -195,6 +231,7 @@ Genre: Punk Rock<br>
 <div class="song" onclick="toggleSong(this)">
 <img src="covers/shattereddreams.png">
 <div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Shattered Dreams</div>
 <div class="artist">Johnny Hates Jazz</div>
@@ -212,6 +249,7 @@ Genre: Synth Pop<br>
 <div class="song" onclick="toggleSong(this)">
 <img src="covers/prisoneroflove.png">
 <div class="play-overlay">▶</div>
+
 <div class="song-info">
 <div class="song-title">Prisoner of Love</div>
 <div class="artist">Tiny Tim</div>
