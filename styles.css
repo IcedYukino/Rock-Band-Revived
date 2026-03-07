@@ -233,3 +233,22 @@ margin-top:40px;
 color:#666;
 padding:20px;
 }
+
+.difficulty-toggle{
+margin-top:8px;
+background:#111;
+border:1px solid #444;
+color:white;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.difficulty-dropdown{
+display:none;
+margin-top:8px;
+}
+
+.difficulty-dropdown.open{
+display:block;
+}
