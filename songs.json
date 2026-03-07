@@ -5,26 +5,17 @@
     "album": "Road to Ruin",
     "year": 1978,
     "genre": "Punk",
+    "cover": "covers/needlesandpins.png",
     "category": "main"
-    "cover": "covers/needlesandpins.png"
   },
   {
     "title": "Poison Whiskey",
     "artist": "Lynyrd Skynyrd",
-    "album": "Pronounced Leh-Nerd Skin-Nerd",
+    "album": "(pronounced 'leh-'nérd 'skin-'nérd)",
     "year": 1973,
     "genre": "Southern Rock",
+    "cover": "covers/poisonwhiskey.png",
     "category": "main"
-    "cover": "covers/poisonwhiskey.png"
-  },
-  {
-    "title": "Shattered Dreams",
-    "artist": "Johnny Hates Jazz",
-    "album": "Turn Back the Clock",
-    "year": 1988,
-    "genre": "New Wave",
-    "category": "main"
-    "cover": "covers/shattereddreams.png"
   },
   {
     "title": "Reach for the Sky",
@@ -32,16 +23,7 @@
     "album": "Sex, Love and Rock 'n' Roll",
     "year": 2004,
     "genre": "Punk",
-    "category": "main"
-    "cover": "covers/reachforthesky.png"
-  },
-  {
-    "title": "Prisoner of Love",
-    "artist": "Tiny Tim",
-    "album": "Tip Toe Through the Tulips",
-    "year": 1986,
-    "genre": "Other",
+    "cover": "covers/reachforthesky.png",
     "category": "dlc"
-    "cover": "covers/prisoneroflove.png"
   }
 ]
