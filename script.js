@@ -67,7 +67,6 @@ grid.appendChild(card);
 card.addEventListener("click", () => {
 
 const dropdown = card.querySelector(".difficulty-dropdown");
-
 dropdown.classList.toggle("open");
 
 });
@@ -80,11 +79,15 @@ function createDifficulty(level) {
 
 let bars = "";
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 5; i++) {
 
-if (i <= level) {
+if (level === 6) {
+bars += `<div class="diff red"></div>`;
+}
+else if (i <= level) {
 bars += `<div class="diff filled"></div>`;
-} else {
+}
+else {
 bars += `<div class="diff"></div>`;
 }
 
