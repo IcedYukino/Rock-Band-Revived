@@ -41,7 +41,7 @@ color:#bbb;
 .header-center{
 display:flex;
 align-items:center;
-gap:16px;
+gap:12px;
 justify-self:center;
 }
 
