@@ -1,271 +1,183 @@
-/* ---------------- GLOBAL ---------------- */
+/* =========================
+GLOBAL
+========================= */
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0a0a0a;
-color:white;
+body {
+    background-color: #0b0b0b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* ---------------- HEADER ---------------- */
+/* =========================
+HEADER
+========================= */
 
-header{
-text-align:center;
-padding:50px 20px 10px;
+.logo {
+    width: 320px;
+    margin-top: 40px;
 }
 
-.logo{
-max-width:420px;
-width:100%;
+.subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-.logo-note{
-font-size:12px;
-color:#9c9c9c;
-margin-top:6px;
-}
-/* ---------------- SEARCH ------------------*/
+/* =========================
+SEARCH BAR
+========================= */
 
-/* SEARCH BAR */
+#search {
+    margin-top: 25px;
+    padding: 12px 16px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
 
-.search-container{
-text-align:center;
-margin:20px 0;
-}
+    background: #1c1c1c;
+    color: white;
 
-#songSearch{
-
-width:300px;
-max-width:80%;
-
-padding:10px 14px;
-
-border-radius:8px;
-border:none;
-
-background:#1b1b1b;
-color:white;
-
-font-size:14px;
-
-outline:none;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.4);
-
-transition:0.2s;
+    box-shadow: 0 0 10px rgba(0,255,100,0.3);
 }
 
-#songSearch:focus{
-box-shadow:0 0 10px rgba(29,185,84,0.5);
+#search:focus {
+    box-shadow: 0 0 14px rgba(0,255,120,0.6);
 }
 
-/* ---------------- SONG GRID ---------------- */
+/* =========================
+SONG GRID
+========================= */
 
-.song-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:32px;
-
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
 }
 
-/* ---------------- SONG CARD ---------------- */
+/* =========================
+SONG CARD
+========================= */
 
-.song{
-background:#171717;
-border-radius:14px;
-overflow:visible;
-position:relative;
-
-box-shadow:0 6px 18px rgba(0,0,0,0.6);
-
-transition:
-transform .2s ease,
-box-shadow .2s ease;
+.song {
+    width: 220px;
+    background: #161616;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+    transition: transform 0.2s;
 }
 
-.song:hover{
-transform:translateY(-6px) scale(1.03);
-box-shadow:
-0 10px 30px rgba(0,0,0,0.9),
-0 0 12px rgba(0,150,255,0.3);
+.song:hover {
+    transform: translateY(-5px);
 }
 
-/* ---------------- COVER ---------------- */
-
-.song img{
-width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
-
-border-radius:14px 14px 0 0;
-
-cursor:pointer;
-
-transition:transform .25s ease;
+.song img {
+    width: 100%;
+    display: block;
 }
 
-.song:hover img{
-transform:scale(1.05);
+/* =========================
+SONG TEXT
+========================= */
+
+.song-info {
+    padding: 14px;
 }
 
-/* ---------------- SONG INFO ---------------- */
-
-.song-info{
-text-align:center;
-padding:14px 10px 16px;
+.song-title {
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.song-info h3{
-font-size:16px;
-margin:5px 0;
+.song-artist {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 3px;
 }
 
-.artist{
-font-size:13px;
-color:#b5b5b5;
-margin:0;
+/* =========================
+GENRE TAGS
+========================= */
+
+.genre {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-/* ---------------- GENRE TAG ---------------- */
-
-.genre{
-font-size:11px;
-padding:4px 9px;
-border-radius:8px;
-display:inline-block;
-margin-top:7px;
-font-weight:bold;
-
-animation:tagPulse 3s infinite ease-in-out;
+.genre.punk {
+    background: #ff4c4c;
 }
 
-/* GENRE COLORS */
-
-.punk{
-background:#ff3b3b;
+.genre.southernrock {
+    background: #ff9f1c;
 }
 
-.southern{
-background:#ff9f1c;
+.genre.newwave {
+    background: #2ec4b6;
 }
 
-.newwave{
-background:#2ec4b6;
+.genre.other {
+    background: #888;
 }
 
-.other{
-background:#7a7a7a;
+/* =========================
+DROPDOWN DETAILS
+========================= */
+
+.song-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    background: #111;
+    border-top: 1px solid #333;
 }
 
-/* GENRE ANIMATION */
-
-@keyframes tagPulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
+.song-details.open {
+    max-height: 200px;
 }
 
-/* ---------------- DROPDOWN ---------------- */
-
-.dropdown{
-display:none;
-
-position:absolute;
-left:0;
-right:0;
-top:100%;
-margin-top:10px;
-
-background:#111;
-border-radius:10px;
-
-padding:12px;
-
-font-size:12px;
-
-box-shadow:0 8px 24px rgba(0,0,0,0.8);
-
-animation:dropdownFade .18s ease;
-
-z-index:10;
+.song-details-content {
+    padding: 14px;
+    font-size: 14px;
+    color: #ccc;
 }
 
-.dropdown p{
-margin:4px 0;
-color:#c7c7c7;
+/* =========================
+PREVIEW BUTTON
+========================= */
+
+.preview-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #1db954;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
 }
 
-/* ---------------- PREVIEW BUTTON ---------------- */
-
-.dropdown a{
-display:inline-block;
-
-margin-top:10px;
-padding:7px 14px;
-
-background:#1db954;
-color:white;
-
-font-size:12px;
-text-decoration:none;
-
-border-radius:6px;
-
-transition:
-transform .1s ease,
-background .15s ease;
+.preview-btn:hover {
+    background: #1ed760;
 }
 
-.dropdown a:hover{
-background:#1ed760;
-transform:scale(1.08);
-}
+/* =========================
+FOOTER
+========================= */
 
-/* ---------------- FOOTER ---------------- */
-
-footer{
-text-align:center;
-font-size:12px;
-color:#888;
-
-padding:40px 20px;
-}
-
-/* ---------------- ANIMATIONS ---------------- */
-
-@keyframes dropdownFade{
-from{
-opacity:0;
-transform:translateY(-6px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* ---------------- MOBILE ---------------- */
-
-@media (max-width:700px){
-
-.song-grid{
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:20px;
-}
-
-.song-info h3{
-font-size:14px;
-}
-
-.artist{
-font-size:12px;
-}
-
-.logo{
-max-width:300px;
-}
-
+footer {
+    margin-top: 80px;
+    color: #777;
+    font-size: 12px;
 }
