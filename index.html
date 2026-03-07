@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -132,9 +133,21 @@ margin-top:6px;
 display:block;
 }
 
-iframe{
+/* SPOTIFY PLAY BUTTON */
+
+.play-btn{
 margin-top:8px;
-border-radius:10px;
+padding:6px 10px;
+font-size:12px;
+background:#1db954;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.play-btn:hover{
+background:#1ed760;
 }
 
 /* FOOTER */
@@ -176,6 +189,18 @@ return A.localeCompare(B,undefined,{numeric:true});
 });
 
 songs.forEach(song=>grid.appendChild(song));
+}
+
+/* SPOTIFY POPUP PLAYER */
+
+function playSpotify(id){
+
+window.open(
+"https://open.spotify.com/embed/track/" + id,
+"spotify",
+"width=320,height=380"
+);
+
 }
 
 </script>
@@ -225,14 +250,10 @@ Album: Road to Ruin<br>
 Year: 1978<br>
 Genre: Punk<br><br>
 
-<iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/53rN8CcgrWP6DZcuQ4Q4og"
-width="100%"
-height="80"
-frameBorder="0"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-</iframe>
+<button class="play-btn" onclick="playSpotify('53rN8CcgrWP6DZcuQ4Q4og')">
+▶ Play Preview
+</button>
+
 </div>
 
 </div>
@@ -258,11 +279,11 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 <div class="details">
 Album: (pronounced 'leh-'nérd 'skin-'nérd)<br>
 Year: 1973<br>
-Genre: Southern Rock<br>
+Genre: Southern Rock<br><br>
 
-<iframe src="https://open.spotify.com/track/4EwfTRmjZMPGxrqYIrlCBv?si=b65f4051056b41fc"
-width="100%" height="80" frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
+<button class="play-btn" onclick="playSpotify('4EwfTRmjZMPGxrqYIrlCBv')">
+▶ Play Preview
+</button>
 
 </div>
 
@@ -289,11 +310,11 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
 <div class="details">
 Album: Sex, Love and Rock 'n' Roll<br>
 Year: 2004<br>
-Genre: Punk<br>
+Genre: Punk<br><br>
 
-<iframe src="https://open.spotify.com/track/5eGDKrTYl2h6ponZyMMhgZ?si=865ae510defd4e8c"
-width="100%" height="80" frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
+<button class="play-btn" onclick="playSpotify('5eGDKrTYl2h6ponZyMMhgZ')">
+▶ Play Preview
+</button>
 
 </div>
 
@@ -320,11 +341,11 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
 <div class="details">
 Album: Turn Back the Clock<br>
 Year: 1988<br>
-Genre: New Wave<br>
+Genre: New Wave<br><br>
 
-<iframe src="https://open.spotify.com/track/5KXKhCfPNS4342ly8tTf6w?si=181386289527435f"
-width="100%" height="80" frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
+<button class="play-btn" onclick="playSpotify('5KXKhCfPNS4342ly8tTf6w')">
+▶ Play Preview
+</button>
 
 </div>
 
@@ -351,11 +372,11 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
 <div class="details">
 Album: Tip Toe Through the Tulips<br>
 Year: 1986<br>
-Genre: Other<br>
+Genre: Other<br><br>
 
-<iframe src="https://open.spotify.com/track/0geMR6FM2We9JrwZkwHgZ6?si=9d00d4e3692d4a28"
-width="100%" height="80" frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen"></iframe>
+<button class="play-btn" onclick="playSpotify('0geMR6FM2We9JrwZkwHgZ6')">
+▶ Play Preview
+</button>
 
 </div>
 
