@@ -5,6 +5,7 @@
     "album": "Road to Ruin",
     "year": 1978,
     "genre": "Punk",
+    "category": "main"
     "cover": "covers/needlesandpins.png"
   },
   {
@@ -13,6 +14,7 @@
     "album": "Pronounced Leh-Nerd Skin-Nerd",
     "year": 1973,
     "genre": "Southern Rock",
+    "category": "main"
     "cover": "covers/poisonwhiskey.png"
   },
   {
@@ -21,6 +23,7 @@
     "album": "Turn Back the Clock",
     "year": 1988,
     "genre": "New Wave",
+    "category": "main"
     "cover": "covers/shattereddreams.png"
   },
   {
@@ -29,6 +32,7 @@
     "album": "Sex, Love and Rock 'n' Roll",
     "year": 2004,
     "genre": "Punk",
+    "category": "main"
     "cover": "covers/reachforthesky.png"
   },
   {
@@ -37,6 +41,7 @@
     "album": "Tip Toe Through the Tulips",
     "year": 1986,
     "genre": "Other",
+    "category": "dlc"
     "cover": "covers/prisoneroflove.png"
   }
 ]
