@@ -153,23 +153,11 @@ CARD TEXT
 DETAILS SECTION
 ========================= */
 
-.song-details{
-
-    .song-details {
+.song-details {
     display: none;
-}
-
-    border-top:1px solid #333;
-
-    background:#101010;
-
-    padding:12px;
-
-    font-size:13px;
-
-    color:#ccc;
-
-    line-height:1.6;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ddd;
 }
 
 .song-details b{
