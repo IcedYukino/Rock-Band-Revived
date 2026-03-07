@@ -7,6 +7,12 @@
     "genre": "Pop/Dance/Electronic",
     "cover": "covers/doctordoctor.png",
     "category": "main"
+
+    "difficulty": {
+      "guitar": 0,
+      "bass": 1,
+      "drums": 2,
+      "vocals": 6
   },
   {
     "title": "Falling and Laughing",
