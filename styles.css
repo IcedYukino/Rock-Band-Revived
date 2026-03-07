@@ -86,9 +86,6 @@ border-radius:10px;
 transition:.25s;
 cursor:pointer;
 
-height:420px;        /* enough space for dropdown */
-overflow:hidden;
-
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -113,6 +110,10 @@ font-size:16px;
 color:#aaa;
 font-size:14px;
 margin:2px 0;
+}
+
+.song:has(.difficulty-dropdown.open){
+box-shadow:0 0 20px #0aa3ff;
 }
 
 /* Genre tags */
