@@ -37,8 +37,6 @@ card.innerHTML = `
 ${song.genre}
 </span>
 
-<button class="difficulty-toggle">Instruments ▼</button>
-
 <div class="difficulty-dropdown">
 
   <div class="instrument">
