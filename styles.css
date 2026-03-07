@@ -85,11 +85,13 @@ padding:15px;
 border-radius:10px;
 transition:.25s;
 cursor:pointer;
-height:340px;   /* fixed card height */
+
+height:420px;        /* enough space for dropdown */
 overflow:hidden;
+
 display:flex;
 flex-direction:column;
-justify-content:flex-start;
+align-items:center;
 }
 
 .song:hover{
