@@ -1,11 +1,20 @@
-function toggleDropdown(img){
+function toggleDropdown(img) {
 
-let song = img.parentElement;
-let dropdown = song.querySelector(".dropdown");
+    const song = img.closest(".song");
+    const dropdown = song.querySelector(".dropdown");
 
-dropdown.style.display =
-dropdown.style.display === "block"
-? "none"
-: "block";
+    // close all other dropdowns
+    document.querySelectorAll(".dropdown").forEach(d => {
+        if (d !== dropdown) {
+            d.style.display = "none";
+        }
+    });
+
+    // toggle clicked one
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
 
 }
