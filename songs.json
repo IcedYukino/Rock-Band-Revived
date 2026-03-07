@@ -36,6 +36,15 @@
     "category": "main"
   },
     {
+    "title": "Shattered Dreams",
+    "artist": "Johnny Hates Jazz",
+    "album": "Turn Back the Clock",
+    "year": 1988,
+    "genre": "New Wave",
+    "cover": "covers/shattereddreams.png",
+    "category": "main"
+  },
+    {
     "title": "Wasted Sacrifice",
     "artist": "Killswitch Engage",
     "album": "The End of Heartache",
