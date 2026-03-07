@@ -54,6 +54,33 @@
     "category": "dlc"
   },
   {
+    "title": "Didn't I (Blow Your Mind This Time)",
+    "artist": "The Delfonics",
+    "album": "The Delfonics",
+    "year": "1970",
+    "genre": "R&B/Soul/Funk",
+    "cover": "covers/didntiblowyourmindthistime.png",
+    "category": "dlc"
+  },
+    {
+    "title": "I Love Music",
+    "artist": "The O'Jays",
+    "album": "Family Reunion",
+    "year": "1975",
+    "genre": "R&B/Soul/Funk",
+    "cover": "covers/ilovemusic.png",
+    "category": "dlc"
+  },
+    {
+    "title": "Ten Percent",
+    "artist": "Double Exposure",
+    "album": "Ten Percent",
+    "year": "1976",
+    "genre": "R&B/Soul/Funk",
+    "cover": "covers/tenpercent.png",
+    "category": "dlc"
+  },
+  {
     "title": "???",
     "artist": "???",
     "album": "???",
