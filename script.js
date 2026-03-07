@@ -61,7 +61,16 @@ ${song.genre}
 
 </div>
 `;
+
 grid.appendChild(card);
+
+card.addEventListener("click", () => {
+
+const dropdown = card.querySelector(".difficulty-dropdown");
+
+dropdown.classList.toggle("open");
+
+});
 
 });
 
@@ -69,19 +78,19 @@ grid.appendChild(card);
 
 function createDifficulty(level) {
 
-  let bars = "";
+let bars = "";
 
-  for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 6; i++) {
 
-    if (i <= level) {
-      bars += `<div class="diff filled"></div>`;
-    } else {
-      bars += `<div class="diff"></div>`;
-    }
+if (i <= level) {
+bars += `<div class="diff filled"></div>`;
+} else {
+bars += `<div class="diff"></div>`;
+}
 
-  }
+}
 
-  return `<div class="diff-row">${bars}</div>`;
+return `<div class="diff-row">${bars}</div>`;
 }
 
 function searchSongs(){
@@ -110,15 +119,3 @@ button.classList.add("active");
 displaySongs(songs);
 
 }
-
-document.addEventListener("click", function(e){
-
-if(e.target.classList.contains("difficulty-toggle")){
-
-const dropdown = e.target.nextElementSibling;
-
-dropdown.classList.toggle("open");
-
-}
-
-});
