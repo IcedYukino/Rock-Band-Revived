@@ -155,6 +155,10 @@ DETAILS SECTION
 
 .song-details{
 
+    .song-details {
+    display: none;
+}
+
     border-top:1px solid #333;
 
     background:#101010;
