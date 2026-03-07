@@ -296,6 +296,13 @@ color:white;
 box-shadow:0 0 8px #ef4444;
 }
 
+/* R&B / Soul / Funk */
+.rbsoulfunk{
+background:#ec4899;
+color:white;
+box-shadow:0 0 8px #ec4899;
+}
+
 /* Difficulty dropdown (overlay version) */
 
 .difficulty-dropdown{
