@@ -11,20 +11,9 @@
 <body>
 
 <header>
+
 <h1>Rock Band Revived</h1>
 <p class="subtitle">A community-made fan pack for the Rock Band series.</p>
-
-<div class="tabs">
-
-<button class="tab active" onclick="switchTab('main')">
-Main Setlist
-</button>
-
-<button class="tab" onclick="switchTab('dlc')">
-DLC
-</button>
-
-</div>  
 
 <input
 type="text"
@@ -33,23 +22,19 @@ placeholder="Search songs or artists..."
 onkeyup="searchSongs()"
 >
 
-<p id="song-count"></p>  
-  
-<br><br>
+<div class="tabs">
 
-<select id="sort" onchange="sortSongs()">
-<option value="title">Sort by Title</option>
-<option value="artist">Sort by Artist</option>
-<option value="year">Sort by Year</option>
-</select>
+<button class="tab active" onclick="switchTab('main', this)">
+Main Setlist
+</button>
 
-<select id="genreFilter" onchange="filterGenre()">
-<option value="all">All Genres</option>
-<option value="Punk">Punk</option>
-<option value="Southern Rock">Southern Rock</option>
-<option value="New Wave">New Wave</option>
-<option value="Other">Other</option>
-</select>
+<button class="tab" onclick="switchTab('dlc', this)">
+DLC
+</button>
+
+</div>
+
+<p id="song-count"></p>
 
 </header>
 
