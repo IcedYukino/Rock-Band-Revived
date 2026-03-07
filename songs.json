@@ -125,6 +125,15 @@
     "cover": "covers/tenpercent.png",
     "category": "dlc"
   },
+    {
+    "title": "Little Miss Lovin'",
+    "artist": "Chicago",
+    "album": "Hot Streets",
+    "year": "1978",
+    "genre": "Classic Rock",
+    "cover": "covers/littlemisslovin.png",
+    "category": "dlc"
+  },
   {
     "title": "???",
     "artist": "???",
