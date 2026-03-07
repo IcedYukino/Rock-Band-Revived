@@ -207,10 +207,17 @@ justify-content:center;
 width:18px;
 height:10px;
 background:#333;
-border:2px solid #111;
 border-radius:2px;
 }
 
+.diff.filled{
+background:#ddd;
+}
+
+.diff.red{
+background:#ff2d2d !important;
+box-shadow:0 0 6px #ff2d2d;
+}
 .diff.filled{
 background:#ddd;
 }
