@@ -1,203 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Rock Band Revived</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#111;
-color:white;
-}
-
-/* HEADER */
-
-header{
-text-align:center;
-padding:30px 20px;
-}
-
-.logo{
-max-width:420px;
-width:100%;
-}
-
-.subtitle{
-font-size:12px;
-color:#aaa;
-margin-top:6px;
-}
-
-/* CONTROLS */
-
-.controls{
-text-align:center;
-margin-bottom:20px;
-}
-
-input, select{
-padding:8px 10px;
-margin:5px;
-border:none;
-border-radius:5px;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(8,1fr);
-gap:18px;
-padding:40px;
-max-width:1800px;
-margin:auto;
-}
-
-/* SONG CARD */
-
-.song{
-background:#1a1a1a;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,0.5);
-cursor:pointer;
-}
-
-.song img{
-width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
-}
-
-.song-info{
-padding:10px;
-text-align:center;
-}
-
-.song-title{
-font-size:15px;
-font-weight:bold;
-}
-
-.artist{
-font-size:13px;
-color:#bbb;
-}
-
-/* GENRE TAG */
-
-.genre{
-font-size:11px;
-padding:2px 6px;
-border-radius:4px;
-display:inline-block;
-margin-top:4px;
-}
-
-.punk{background:#ff3b3b;}
-.southern{background:#ff9f1c;}
-.newwave{background:#2ec4b6;}
-.other{background:#888;}
-
-/* DIFFICULTY BAR */
-
-.diff{
-margin-top:6px;
-}
-
-.bar{
-height:5px;
-background:#333;
-margin:2px 0;
-}
-
-.fill{
-height:5px;
-background:#4da3ff;
-}
-
-/* DETAILS */
-
-.details{
-display:none;
-font-size:12px;
-color:#ccc;
-margin-top:6px;
-}
-
-.song.active .details{
-display:block;
-}
-
-/* SPOTIFY BUTTON */
-
-.play-btn{
-margin-top:8px;
-padding:6px 10px;
-font-size:12px;
-background:#1db954;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
-
-.play-btn:hover{
-background:#1ed760;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-font-size:12px;
-color:#888;
-padding:30px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 <script>
 
 function toggleSong(song){
+
+let songs=document.querySelectorAll(".song");
+
+songs.forEach(s=>{
+if(s!==song){
+s.classList.remove("active");
+}
+});
+
 song.classList.toggle("active");
+
 }
 
 function searchSongs(){
+
 let input=document.getElementById("search").value.toLowerCase();
 let songs=document.getElementsByClassName("song");
 
 for(let s of songs){
+
 let text=s.innerText.toLowerCase();
 s.style.display=text.includes(input)?"":"none";
+
 }
+
 }
 
 function sortSongs(){
+
 let type=document.getElementById("sort").value;
 let grid=document.getElementById("grid");
 let songs=[...document.querySelectorAll(".song")];
 
 songs.sort((a,b)=>{
+
 let A=a.dataset[type];
 let B=b.dataset[type];
+
 return A.localeCompare(B,undefined,{numeric:true});
+
 });
 
 songs.forEach(song=>grid.appendChild(song));
+
 }
 
-/* SPOTIFY POPUP */
-
 function playSpotify(id){
+
 window.open(
-"https://open.spotify.com/embed/track/" + id,
+"https://open.spotify.com/embed/track/"+id,
 "spotify",
 "width=320,height=380"
 );
+
 }
 
 </script>
@@ -207,8 +73,13 @@ window.open(
 <body>
 
 <header>
+
 <img src="assets/logo.png" class="logo">
-<div class="subtitle">The title and logo of this project is subject to change.</div>
+
+<div class="subtitle">
+The title and logo of this project is subject to change.
+</div>
+
 </header>
 
 <div class="controls">
@@ -225,13 +96,19 @@ window.open(
 
 <div class="grid" id="grid">
 
+
 <!-- NEEDLES AND PINS -->
 
-<div class="song" onclick="toggleSong(this)" data-title="Needles and Pins" data-artist="Ramones" data-year="1978">
+<div class="song"
+onclick="toggleSong(this)"
+data-title="Needles and Pins"
+data-artist="Ramones"
+data-year="1978">
 
 <img src="covers/needlesandpins.png">
 
 <div class="song-info">
+
 <div class="song-title">Needles and Pins</div>
 <div class="artist">Ramones</div>
 
@@ -246,7 +123,7 @@ window.open(
 Album: Road to Ruin<br>
 Year: 1978<br>
 
-<button class="play-btn" onclick="event.stopPropagation(); playSpotify('53rN8CcgrWP6DZcuQ4Q4og')">
+<button class="play-btn" onclick="playSpotify('53rN8CcgrWP6DZcuQ4Q4og')">
 ▶ Play Preview
 </button>
 
@@ -255,13 +132,19 @@ Year: 1978<br>
 </div>
 </div>
 
+
 <!-- POISON WHISKEY -->
 
-<div class="song" onclick="toggleSong(this)" data-title="Poison Whiskey" data-artist="Lynyrd Skynyrd" data-year="1973">
+<div class="song"
+onclick="toggleSong(this)"
+data-title="Poison Whiskey"
+data-artist="Lynyrd Skynyrd"
+data-year="1973">
 
 <img src="covers/poisonwhiskey.png">
 
 <div class="song-info">
+
 <div class="song-title">Poison Whiskey</div>
 <div class="artist">Lynyrd Skynyrd</div>
 
@@ -276,7 +159,7 @@ Year: 1978<br>
 Album: (pronounced 'leh-'nérd 'skin-'nérd)<br>
 Year: 1973<br>
 
-<button class="play-btn" onclick="event.stopPropagation(); playSpotify('4EwfTRmjZMPGxrqYIrlCBv')">
+<button class="play-btn" onclick="playSpotify('4EwfTRmjZMPGxrqYIrlCBv')">
 ▶ Play Preview
 </button>
 
@@ -285,13 +168,19 @@ Year: 1973<br>
 </div>
 </div>
 
+
 <!-- REACH FOR THE SKY -->
 
-<div class="song" onclick="toggleSong(this)" data-title="Reach for the Sky" data-artist="Social Distortion" data-year="2004">
+<div class="song"
+onclick="toggleSong(this)"
+data-title="Reach for the Sky"
+data-artist="Social Distortion"
+data-year="2004">
 
 <img src="covers/reachforthesky.png">
 
 <div class="song-info">
+
 <div class="song-title">Reach for the Sky</div>
 <div class="artist">Social Distortion</div>
 
@@ -306,7 +195,7 @@ Year: 1973<br>
 Album: Sex, Love and Rock 'n' Roll<br>
 Year: 2004<br>
 
-<button class="play-btn" onclick="event.stopPropagation(); playSpotify('5eGDKrTYl2h6ponZyMMhgZ')">
+<button class="play-btn" onclick="playSpotify('5eGDKrTYl2h6ponZyMMhgZ')">
 ▶ Play Preview
 </button>
 
@@ -315,13 +204,19 @@ Year: 2004<br>
 </div>
 </div>
 
+
 <!-- SHATTERED DREAMS -->
 
-<div class="song" onclick="toggleSong(this)" data-title="Shattered Dreams" data-artist="Johnny Hates Jazz" data-year="1988">
+<div class="song"
+onclick="toggleSong(this)"
+data-title="Shattered Dreams"
+data-artist="Johnny Hates Jazz"
+data-year="1988">
 
 <img src="covers/shattereddreams.png">
 
 <div class="song-info">
+
 <div class="song-title">Shattered Dreams</div>
 <div class="artist">Johnny Hates Jazz</div>
 
@@ -336,7 +231,7 @@ Year: 2004<br>
 Album: Turn Back the Clock<br>
 Year: 1988<br>
 
-<button class="play-btn" onclick="event.stopPropagation(); playSpotify('5KXKhCfPNS4342ly8tTf6w')">
+<button class="play-btn" onclick="playSpotify('5KXKhCfPNS4342ly8tTf6w')">
 ▶ Play Preview
 </button>
 
@@ -345,13 +240,19 @@ Year: 1988<br>
 </div>
 </div>
 
+
 <!-- PRISONER OF LOVE -->
 
-<div class="song" onclick="toggleSong(this)" data-title="Prisoner of Love" data-artist="Tiny Tim" data-year="1986">
+<div class="song"
+onclick="toggleSong(this)"
+data-title="Prisoner of Love"
+data-artist="Tiny Tim"
+data-year="1986">
 
 <img src="covers/prisoneroflove.png">
 
 <div class="song-info">
+
 <div class="song-title">Prisoner of Love</div>
 <div class="artist">Tiny Tim</div>
 
@@ -366,7 +267,7 @@ Year: 1988<br>
 Album: Tip Toe Through the Tulips<br>
 Year: 1986<br>
 
-<button class="play-btn" onclick="event.stopPropagation(); playSpotify('0geMR6FM2We9JrwZkwHgZ6')">
+<button class="play-btn" onclick="playSpotify('0geMR6FM2We9JrwZkwHgZ6')">
 ▶ Play Preview
 </button>
 
@@ -376,6 +277,7 @@ Year: 1986<br>
 </div>
 
 </div>
+
 
 <footer>
 This project is not affiliated with Harmonix. This is entirely a fan-made project.
