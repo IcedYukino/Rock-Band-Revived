@@ -8,55 +8,55 @@ margin:0;
 text-align:center;
 }
 
-/* Header */
-
-header{
-padding:20px 30px;
-}
+/* Header layout */
 
 .header{
 display:flex;
 align-items:center;
-gap:20px;
-justify-content:flex-start;
-flex-wrap:wrap;
+justify-content:space-between;
+padding:20px 40px;
 }
 
-.logo{
-height:70px;
-object-fit:contain;
-filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
+/* LEFT */
+
+.header-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.title{
+margin:0;
+font-size:22px;
 }
 
 .subtitle{
-color:#bbb;
 margin:0;
 font-size:13px;
+color:#bbb;
 }
 
-/* Search */
+/* CENTER */
 
-#search{
-padding:10px;
-width:260px;
-border:none;
-border-radius:6px;
+.header-center{
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-/* Random button */
+/* RIGHT */
 
-#randomSong{
-background:#222;
-color:white;
-border:none;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-font-weight:600;
+.header-right{
+font-size:14px;
+color:#ddd;
 }
 
-#randomSong:hover{
-background:#333;
+/* Logo */
+
+.logo{
+height:60px;
+object-fit:contain;
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 }
 
 /* Tabs */
