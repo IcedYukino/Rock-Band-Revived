@@ -24,6 +24,40 @@ font-size:12px;
 color:#9c9c9c;
 margin-top:6px;
 }
+/* ---------------- SEARCH ------------------*/
+
+/* SEARCH BAR */
+
+.search-container{
+text-align:center;
+margin:20px 0;
+}
+
+#songSearch{
+
+width:300px;
+max-width:80%;
+
+padding:10px 14px;
+
+border-radius:8px;
+border:none;
+
+background:#1b1b1b;
+color:white;
+
+font-size:14px;
+
+outline:none;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+
+transition:0.2s;
+}
+
+#songSearch:focus{
+box-shadow:0 0 10px rgba(29,185,84,0.5);
+}
 
 /* ---------------- SONG GRID ---------------- */
 
