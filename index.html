@@ -11,18 +11,23 @@
 <body>
 
 <header class="header">
-  <img src="assets/logo.png" class="logo">
-  <p class="subtitle">A community-made setlist for the Rock Band series.</p>
 
-  <input
-  type="text"
-  id="search"
-  placeholder="Search songs or artists..."
-  onkeyup="searchSongs()"
-  >
+  <div class="title-area">
+    <img src="assets/logo.png" class="logo">
+    <p class="subtitle">A community-made setlist for the Rock Band series.</p>
+  </div>
 
-  <button id="randomSong" class="tab">Random Song</button>
-  
+  <div class="search-area">
+    <input
+      type="text"
+      id="search"
+      placeholder="Search songs or artists..."
+      onkeyup="searchSongs()"
+    >
+
+    <button id="randomSong">🎲 Random Song</button>
+  </div>
+
   <div class="tabs">
     <button class="tab active" onclick="switchTab('main', this)">
       Main Setlist
@@ -34,6 +39,7 @@
   </div>
 
   <p id="song-count"></p>
+
 </header>
 
 <main>
