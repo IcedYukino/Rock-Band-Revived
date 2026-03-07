@@ -1,5 +1,14 @@
 [
   {
+    "title": "Doctor! Doctor!",
+    "artist": "Thompson Twins",
+    "album": "Into the Gap",
+    "year": 1984,
+    "genre": "Pop/Dance/Electronic",
+    "cover": "covers/doctordoctor.png",
+    "category": "main"
+  },
+  {
     "title": "Needles and Pins",
     "artist": "Ramones",
     "album": "Road to Ruin",
