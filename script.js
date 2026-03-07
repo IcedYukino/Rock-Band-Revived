@@ -36,13 +36,6 @@ card.innerHTML = `
 <span class="genre-tag ${song.genre.toLowerCase().replace(/[^a-z]/g,'')}">
 ${song.genre}
 </span>
-`;
-  
-grid.appendChild(card);
-
-});
-
-}
 
 <div class="difficulty-dropdown">
 
@@ -67,11 +60,19 @@ grid.appendChild(card);
   </div>
 
 </div>
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
 function createDifficulty(level) {
 
   let bars = "";
 
-  for (let i = 0; i <= 6; i++) {
+  for (let i = 1; i <= 6; i++) {
 
     if (i <= level) {
       bars += `<div class="diff filled"></div>`;
@@ -89,10 +90,8 @@ function searchSongs(){
 const input = document.getElementById("search").value.toLowerCase();
 
 const filtered = songs.filter(song =>
-
 (song.title.toLowerCase().includes(input) ||
 song.artist.toLowerCase().includes(input))
-
 );
 
 displaySongs(filtered);
