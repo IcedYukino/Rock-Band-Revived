@@ -1,111 +1,164 @@
-/* PAGE */
+/* GLOBAL */
 
-body {
-    background-color: #000;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    text-align: center;
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
+color:white;
 }
-
 
 /* HEADER */
 
-header {
-    margin-top: 40px;
+header{
+text-align:center;
+padding:30px 20px;
 }
 
-.logo {
-    width: 380px;
+.logo{
+max-width:420px;
+width:100%;
 }
 
-.logo-note {
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 5px;
+.logo-note{
+font-size:12px;
+color:#aaa;
+margin-top:6px;
 }
 
+/* GRID */
 
-/* SONG GRID */
-
-.song-grid {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 60px;
-    flex-wrap: wrap;
+.song-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+padding:40px;
+max-width:1800px;
+margin:auto;
 }
-
 
 /* SONG CARD */
 
-.song {
-    width: 160px;
+.song{
+background:#181818;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 6px 16px rgba(0,0,0,0.5);
+transition:all .2s ease;
 }
 
-
-/* COVER ART */
-
-.song img {
-    width: 150px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+.song:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 22px rgba(0,0,0,0.7);
 }
 
-.song img:hover {
-    transform: scale(1.05);
+/* COVER IMAGE */
+
+.song img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+cursor:pointer;
 }
 
+/* SONG INFO */
 
-/* SONG TEXT */
-
-.song-info h3 {
-    margin-top: 12px;
-    margin-bottom: 3px;
-    font-size: 16px;
+.song-info{
+text-align:center;
+padding:10px;
 }
 
-.artist {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
+.song-info h3{
+font-size:15px;
+margin:4px 0;
 }
 
+.artist{
+font-size:13px;
+color:#bbb;
+margin:0;
+}
 
 /* GENRE TAG */
 
-.genre {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 20px;
-    background: #e53935;
+.genre{
+font-size:11px;
+padding:3px 8px;
+border-radius:4px;
+display:inline-block;
+margin-top:6px;
+font-weight:bold;
 }
 
+/* GENRE COLORS */
+
+.punk{
+background:#ff3b3b;
+}
+
+.southern{
+background:#ff9f1c;
+}
+
+.newwave{
+background:#2ec4b6;
+}
+
+.other{
+background:#777;
+}
 
 /* DROPDOWN */
 
-.dropdown {
-    display: none;
-    background: #222;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-    font-size: 13px;
+.dropdown{
+display:none;
+padding:12px;
+font-size:12px;
+background:#101010;
+border-top:1px solid #2a2a2a;
+animation:fadeIn .15s ease-in-out;
 }
 
-.dropdown a {
-    color: #00e676;
-    text-decoration: none;
+.dropdown p{
+margin:4px 0;
+color:#ccc;
 }
 
+/* SPOTIFY BUTTON */
+
+.dropdown a{
+display:inline-block;
+margin-top:8px;
+padding:6px 10px;
+background:#1db954;
+color:white;
+text-decoration:none;
+font-size:12px;
+border-radius:6px;
+transition:.15s;
+}
+
+.dropdown a:hover{
+background:#1ed760;
+}
 
 /* FOOTER */
 
-footer {
-    margin-top: 80px;
-    font-size: 12px;
-    color: #888;
+footer{
+text-align:center;
+font-size:12px;
+color:#888;
+padding:30px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-4px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
