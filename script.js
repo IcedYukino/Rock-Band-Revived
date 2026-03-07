@@ -29,10 +29,15 @@ card.className = "song";
 
 card.innerHTML = `
 <img src="${song.cover}">
+
 <h3>${song.title}</h3>
 <p>${song.artist}</p>
-`;
 
+<span class="genre-tag ${song.genre.toLowerCase().replace(/[^a-z]/g,'')}">
+${song.genre}
+</span>
+`;
+  
 grid.appendChild(card);
 
 });
