@@ -1,109 +1,111 @@
-```css
+/* PAGE */
+
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
-  color: white;
-  text-align: center;
+    background-color: #000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* LOGO */
+
+/* HEADER */
+
+header {
+    margin-top: 40px;
+}
 
 .logo {
-  width: 300px;
-  margin-top: 40px;
+    width: 380px;
 }
 
 .logo-note {
-  font-size: 12px;
-  opacity: 0.7;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
 }
+
 
 /* SONG GRID */
 
 .song-grid {
-  display: flex;
-  justify-content: center;
-  gap: 70px;
-  margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+    flex-wrap: wrap;
 }
+
 
 /* SONG CARD */
 
+.song {
+    width: 160px;
+}
+
+
+/* COVER ART */
+
 .song img {
-  width: 160px;
-  border-radius: 10px;
-  cursor: pointer;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* SONG INFO */
-
-.song-info {
-  margin-top: 12px;
+.song img:hover {
+    transform: scale(1.05);
 }
+
+
+/* SONG TEXT */
 
 .song-info h3 {
-  margin: 6px 0 2px 0;
-  font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    font-size: 16px;
 }
 
 .artist {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.85;
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
 }
+
 
 /* GENRE TAG */
 
 .genre {
-  display: inline-block;
-  margin-top: 4px;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 12px;
-  font-weight: bold;
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    background: #e53935;
 }
 
-/* GENRE COLORS */
-
-.punk {
-  background-color: #ff3b3b;
-}
-
-.rock {
-  background-color: #3b82ff;
-}
-
-.newwave {
-  background-color: #b84cff;
-}
-
-.other {
-  background-color: #777;
-}
 
 /* DROPDOWN */
 
 .dropdown {
-  display: none;
-  margin-top: 10px;
-  font-size: 13px;
+    display: none;
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 .dropdown a {
-  color: #1db954;
-  text-decoration: none;
+    color: #00e676;
+    text-decoration: none;
 }
 
-.dropdown a:hover {
-  text-decoration: underline;
-}
 
 /* FOOTER */
 
-.footer-note {
-  margin-top: 120px;
-  font-size: 12px;
-  opacity: 0.7;
+footer {
+    margin-top: 80px;
+    font-size: 12px;
+    color: #888;
 }
-```
