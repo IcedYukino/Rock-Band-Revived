@@ -21,7 +21,6 @@ dropdown.style.display = "block";
 function searchSongs() {
 
 const input = document.getElementById("songSearch").value.toLowerCase();
-
 const songs = document.querySelectorAll(".song");
 
 songs.forEach(song => {
@@ -29,10 +28,10 @@ songs.forEach(song => {
 const title = song.querySelector("h3").innerText.toLowerCase();
 const artist = song.querySelector(".artist").innerText.toLowerCase();
 
-if(title.includes(input) || artist.includes(input)){
-song.style.display = "block";
-}else{
-song.style.display = "none";
+if (title.includes(input) || artist.includes(input)) {
+    song.style.display = "";
+} else {
+    song.style.display = "none";
 }
 
 });
