@@ -44,6 +44,23 @@ grid.appendChild(card);
 
 }
 
+function createDifficulty(level) {
+
+  let bars = "";
+
+  for (let i = 0; i <= 6; i++) {
+
+    if (i <= level) {
+      bars += `<div class="diff filled"></div>`;
+    } else {
+      bars += `<div class="diff"></div>`;
+    }
+
+  }
+
+  return `<div class="diff-row">${bars}</div>`;
+}
+
 function searchSongs(){
 
 const input = document.getElementById("search").value.toLowerCase();
