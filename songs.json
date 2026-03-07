@@ -17,6 +17,15 @@
     "cover": "covers/poisonwhiskey.png",
     "category": "main"
   },
+    {
+    "title": "Prisoner of Love",
+    "artist": "Tiny Tim",
+    "album": "Tip Toe Through the Tulips",
+    "year": 1986,
+    "genre": "Other",
+    "cover": "covers/prisoneroflove.png",
+    "category": "main"
+  },
   {
     "title": "Reach for the Sky",
     "artist": "Social Distortion",
@@ -24,6 +33,15 @@
     "year": 2004,
     "genre": "Punk",
     "cover": "covers/reachforthesky.png",
+    "category": "main"
+  },
+    {
+    "title": "Wasted Sacrifice",
+    "artist": "Killswitch Engage",
+    "album": "The End of Heartache",
+    "year": 2004,
+    "genre": "Metal",
+    "cover": "covers/wastedsacrifice.png",
     "category": "main"
   },
   {
