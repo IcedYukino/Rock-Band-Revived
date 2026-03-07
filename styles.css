@@ -8,20 +8,22 @@ margin:0;
 text-align:center;
 }
 
+/* Header */
+
 header{
-padding:30px;
+padding:20px 30px;
 }
 
 .header{
 display:flex;
-justify-content:center;
 align-items:center;
 gap:20px;
+justify-content:flex-start;
 flex-wrap:wrap;
 }
 
 .logo{
-height:80px;
+height:70px;
 object-fit:contain;
 filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 }
@@ -29,22 +31,39 @@ filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 .subtitle{
 color:#bbb;
 margin:0;
+font-size:13px;
 }
 
 /* Search */
 
 #search{
 padding:10px;
-width:250px;
-margin-top:15px;
+width:260px;
 border:none;
-border-radius:5px;
+border-radius:6px;
+}
+
+/* Random button */
+
+#randomSong{
+background:#222;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+#randomSong:hover{
+background:#333;
 }
 
 /* Tabs */
 
 .tabs{
-margin-top:20px;
+display:flex;
+gap:10px;
 }
 
 .tab{
@@ -52,7 +71,6 @@ background:#222;
 border:none;
 color:white;
 padding:10px 18px;
-margin:5px;
 cursor:pointer;
 border-radius:6px;
 font-weight:bold;
@@ -65,6 +83,13 @@ background:#333;
 
 .tab.active{
 background:#0aa3ff;
+}
+
+/* Song count */
+
+#song-count{
+margin-left:auto;
+color:#ddd;
 }
 
 /* Song grid */
@@ -85,7 +110,6 @@ padding:15px;
 border-radius:10px;
 transition:.25s;
 cursor:pointer;
-
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -175,9 +199,8 @@ color:white;
 box-shadow:0 0 6px #999;
 }
 
-/* Classic Rock */
-
 /* Alternative */
+
 .alternative{
 background:#3b82f6;
 color:white;
@@ -185,6 +208,7 @@ box-shadow:0 0 8px #3b82f6;
 }
 
 /* Blues */
+
 .blues{
 background:#2563eb;
 color:white;
@@ -192,6 +216,7 @@ box-shadow:0 0 8px #2563eb;
 }
 
 /* Classic Rock */
+
 .classicrock{
 background:#f97316;
 color:white;
@@ -199,6 +224,7 @@ box-shadow:0 0 8px #f97316;
 }
 
 /* Classical */
+
 .classical{
 background:#c084fc;
 color:white;
@@ -206,6 +232,7 @@ box-shadow:0 0 8px #c084fc;
 }
 
 /* Country */
+
 .country{
 background:#eab308;
 color:black;
@@ -213,6 +240,7 @@ box-shadow:0 0 8px #eab308;
 }
 
 /* Emo */
+
 .emo{
 background:#ec4899;
 color:white;
@@ -220,6 +248,7 @@ box-shadow:0 0 8px #ec4899;
 }
 
 /* Glam */
+
 .glam{
 background:#f472b6;
 color:white;
@@ -227,6 +256,7 @@ box-shadow:0 0 8px #f472b6;
 }
 
 /* Grunge */
+
 .grunge{
 background:#78716c;
 color:white;
@@ -234,6 +264,7 @@ box-shadow:0 0 8px #78716c;
 }
 
 /* Hip-Hop / Rap */
+
 .hiphoprap{
 background:#22c55e;
 color:white;
@@ -241,6 +272,7 @@ box-shadow:0 0 8px #22c55e;
 }
 
 /* Indie Rock */
+
 .indierock{
 background:#6366f1;
 color:white;
@@ -248,6 +280,7 @@ box-shadow:0 0 8px #6366f1;
 }
 
 /* J-Rock */
+
 .jrock{
 background:#ef4444;
 color:white;
@@ -255,6 +288,7 @@ box-shadow:0 0 8px #ef4444;
 }
 
 /* Novelty */
+
 .novelty{
 background:#facc15;
 color:black;
@@ -262,6 +296,7 @@ box-shadow:0 0 8px #facc15;
 }
 
 /* Nu-Metal */
+
 .numetal{
 background:#6b7280;
 color:white;
@@ -269,6 +304,7 @@ box-shadow:0 0 8px #6b7280;
 }
 
 /* Pop-Rock */
+
 .poprock{
 background:#38bdf8;
 color:white;
@@ -276,6 +312,7 @@ box-shadow:0 0 8px #38bdf8;
 }
 
 /* Prog */
+
 .prog{
 background:#8b5cf6;
 color:white;
@@ -283,6 +320,7 @@ box-shadow:0 0 8px #8b5cf6;
 }
 
 /* Reggae / Ska */
+
 .reggaeska{
 background:#22c55e;
 color:white;
@@ -290,6 +328,7 @@ box-shadow:0 0 8px #22c55e;
 }
 
 /* Rock */
+
 .rock{
 background:#ef4444;
 color:white;
@@ -297,13 +336,14 @@ box-shadow:0 0 8px #ef4444;
 }
 
 /* R&B / Soul / Funk */
+
 .rbsoulfunk{
 background:#ec4899;
 color:white;
 box-shadow:0 0 8px #ec4899;
 }
 
-/* Difficulty dropdown (overlay version) */
+/* Difficulty dropdown */
 
 .difficulty-dropdown{
 max-height:0;
@@ -318,6 +358,7 @@ padding-top:0;
 max-height:140px;
 padding-top:8px;
 }
+
 /* Instruments */
 
 .instrument{
@@ -354,26 +395,6 @@ background:#ddd;
 .diff.red{
 background:#ff2d2d !important;
 box-shadow:0 0 6px #ff2d2d;
-}
-
-.search-area{
-display:flex;
-gap:10px;
-align-items:center;
-}
-
-#randomSong{
-background:#222;
-color:white;
-border:none;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-font-weight:600;
-}
-
-#randomSong:hover{
-background:#333;
 }
 
 /* Footer */
