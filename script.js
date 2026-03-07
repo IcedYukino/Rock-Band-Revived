@@ -44,6 +44,29 @@ grid.appendChild(card);
 
 }
 
+<div class="difficulty-dropdown">
+
+  <div class="instrument">
+    <span>Guitar</span>
+    ${createDifficulty(song.difficulty.guitar)}
+  </div>
+
+  <div class="instrument">
+    <span>Bass</span>
+    ${createDifficulty(song.difficulty.bass)}
+  </div>
+
+  <div class="instrument">
+    <span>Drums</span>
+    ${createDifficulty(song.difficulty.drums)}
+  </div>
+
+  <div class="instrument">
+    <span>Vocals</span>
+    ${createDifficulty(song.difficulty.vocals)}
+  </div>
+
+</div>
 function createDifficulty(level) {
 
   let bars = "";
