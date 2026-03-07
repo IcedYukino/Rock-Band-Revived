@@ -85,7 +85,8 @@ padding:15px;
 border-radius:10px;
 transition:.25s;
 cursor:pointer;
-position:relative;   /* important for overlay dropdown */
+position:relative;
+min-height:310px;
 }
 
 .song:hover{
@@ -174,7 +175,7 @@ box-shadow:0 0 6px #999;
 position:absolute;
 left:0;
 right:0;
-bottom:0;
+top:210px; /* sits below album art */
 
 background:#141414;
 padding:12px;
@@ -187,6 +188,7 @@ transform:translateY(10px);
 pointer-events:none;
 
 transition:.25s;
+z-index:5;
 }
 
 .difficulty-dropdown.open{
