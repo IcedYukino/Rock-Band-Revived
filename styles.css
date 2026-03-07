@@ -1,57 +1,110 @@
 body{
-background:#111;
+background:#0b0b0b;
 color:white;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 text-align:center;
+margin:0;
 }
 
 .logo{
-width:450px;
-margin-top:20px;
+width:350px;
+margin-top:30px;
 }
 
 .logo-note{
-font-size:10px;
+font-size:12px;
 color:#aaa;
-margin-top:-10px;
+margin-bottom:40px;
 }
 
 .song-grid{
-display:grid;
-grid-template-columns:repeat(8,1fr);
-gap:25px;
-padding:30px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+/* SONG CARD */
+
+.song{
+width:170px;
+text-align:center;
 }
 
 .song img{
-width:160px;
+width:150px;
+border-radius:10px;
 cursor:pointer;
-border-radius:8px;
-transition:transform .2s;
+transition:transform .15s;
 }
 
 .song img:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
+
+/* SONG TEXT */
+
+.song-info{
+margin-top:8px;
+}
+
+.song-info h3{
+margin:4px 0;
+font-size:16px;
+}
+
+.artist{
+margin:2px 0;
+font-size:14px;
+color:#ccc;
+}
+
+/* GENRE TAGS */
+
+.genre{
+display:inline-block;
+padding:3px 8px;
+border-radius:6px;
+font-size:12px;
+margin-top:4px;
+}
+
+.punk{
+background:#ff4d4d;
+}
+
+.southernrock{
+background:#ff9900;
+}
+
+.newwave{
+background:#00c9ff;
+}
+
+.other{
+background:#888;
+}
+
+/* DROPDOWN */
 
 .dropdown{
 display:none;
 background:#222;
+margin-top:10px;
 padding:10px;
-margin-top:6px;
-border-radius:6px;
+border-radius:8px;
 font-size:14px;
 }
 
 .dropdown a{
-color:#1DB954;
+color:#00ff7f;
 text-decoration:none;
-font-weight:bold;
 }
 
+/* FOOTER */
+
 .footer-note{
+margin-top:80px;
 font-size:12px;
 color:#aaa;
-margin-top:40px;
-padding-bottom:20px;
 }
