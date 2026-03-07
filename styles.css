@@ -1,110 +1,111 @@
-body{
-background:#0b0b0b;
-color:white;
-font-family:Arial, Helvetica, sans-serif;
-text-align:center;
-margin:0;
+```css
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-.logo{
-width:350px;
-margin-top:30px;
+.container {
+  width: 400px;
+  text-align: center;
+  padding: 20px;
 }
 
-.logo-note{
-font-size:12px;
-color:#aaa;
-margin-bottom:40px;
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
-.song-grid{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+.song-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
-/* SONG CARD */
-
-.song{
-width:170px;
-text-align:center;
+.cover-art {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.song img{
-width:150px;
-border-radius:10px;
-cursor:pointer;
-transition:transform .15s;
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
 }
 
-.song img:hover{
-transform:scale(1.05);
+.song-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
 }
 
-/* SONG TEXT */
-
-.song-info{
-margin-top:8px;
+.song-artist {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.85;
 }
 
-.song-info h3{
-margin:4px 0;
-font-size:16px;
+.genre-tag {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 2px;
 }
 
-.artist{
-margin:2px 0;
-font-size:14px;
-color:#ccc;
+/* Genre colors */
+.genre-tag.punk {
+  background-color: #ff3b3b;
 }
 
-/* GENRE TAGS */
-
-.genre{
-display:inline-block;
-padding:3px 8px;
-border-radius:6px;
-font-size:12px;
-margin-top:4px;
+.genre-tag.rock {
+  background-color: #2d9cff;
 }
 
-.punk{
-background:#ff4d4d;
+.genre-tag.classic-rock {
+  background-color: #ff9800;
 }
 
-.southernrock{
-background:#ff9900;
+.details {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
-.newwave{
-background:#00c9ff;
+.dropdown {
+  margin-top: 10px;
 }
 
-.other{
-background:#888;
+.dropdown button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-/* DROPDOWN */
-
-.dropdown{
-display:none;
-background:#222;
-margin-top:10px;
-padding:10px;
-border-radius:8px;
-font-size:14px;
+.dropdown-content {
+  display: none;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 14px;
 }
 
-.dropdown a{
-color:#00ff7f;
-text-decoration:none;
+.spotify-player {
+  margin-top: 12px;
 }
 
-/* FOOTER */
-
-.footer-note{
-margin-top:80px;
-font-size:12px;
-color:#aaa;
+.spotify-player iframe {
+  border-radius: 8px;
 }
+```
