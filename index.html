@@ -1,287 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<title>Rock Band Revived</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script>
-
-function toggleSong(song){
-
-let songs=document.querySelectorAll(".song");
-
-songs.forEach(s=>{
-if(s!==song){
-s.classList.remove("active");
-}
-});
-
-song.classList.toggle("active");
-
-}
-
-function searchSongs(){
-
-let input=document.getElementById("search").value.toLowerCase();
-let songs=document.getElementsByClassName("song");
-
-for(let s of songs){
-
-let text=s.innerText.toLowerCase();
-s.style.display=text.includes(input)?"":"none";
-
-}
-
-}
-
-function sortSongs(){
-
-let type=document.getElementById("sort").value;
-let grid=document.getElementById("grid");
-let songs=[...document.querySelectorAll(".song")];
-
-songs.sort((a,b)=>{
-
-let A=a.dataset[type];
-let B=b.dataset[type];
-
-return A.localeCompare(B,undefined,{numeric:true});
-
-});
-
-songs.forEach(song=>grid.appendChild(song));
-
-}
-
-function playSpotify(id){
-
-window.open(
-"https://open.spotify.com/embed/track/"+id,
-"spotify",
-"width=320,height=380"
-);
-
-}
-
-</script>
-
+<title>Rock Band Project</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
+<img src="logo.png" class="logo">
 
-<img src="assets/logo.png" class="logo">
-
-<div class="subtitle">
-The title and logo of this project is subject to change.
-</div>
-
+<p class="logo-note">The title and logo of this project is subject to change.</p>
 </header>
 
-<div class="controls">
+<div class="song-grid">
 
-<input id="search" onkeyup="searchSongs()" placeholder="Search songs...">
+<!-- SONG 1 -->
+<div class="song">
+<img src="covers/needlesandpins.jpg" onclick="toggleDropdown(this)">
 
-<select id="sort" onchange="sortSongs()">
-<option value="title">Sort by Title</option>
-<option value="artist">Sort by Artist</option>
-<option value="year">Sort by Year</option>
-</select>
+<div class="dropdown">
+<p><b>Song:</b> Needles and Pins</p>
+<p><b>Artist:</b> Ramones</p>
+<p><b>Album:</b> End of the Century</p>
+<p><b>Year:</b> 1980</p>
 
-</div>
-
-<div class="grid" id="grid">
-
-
-<!-- NEEDLES AND PINS -->
-
-<div class="song"
-onclick="toggleSong(this)"
-data-title="Needles and Pins"
-data-artist="Ramones"
-data-year="1978">
-
-<img src="covers/needlesandpins.png">
-
-<div class="song-info">
-
-<div class="song-title">Needles and Pins</div>
-<div class="artist">Ramones</div>
-
-<div class="genre punk">Punk</div>
-
-<div class="diff">
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-<div class="bar"><div class="fill" style="width:60%"></div></div>
-</div>
-
-<div class="details">
-Album: Road to Ruin<br>
-Year: 1978<br>
-
-<button class="play-btn" onclick="playSpotify('53rN8CcgrWP6DZcuQ4Q4og')">
-▶ Play Preview
-</button>
-
-</div>
-
+<a href="https://open.spotify.com/track/53rN8CcgrWP6DZcuQ4Q4og" target="_blank">
+▶ Listen
+</a>
 </div>
 </div>
 
+<!-- SONG 2 -->
+<div class="song">
+<img src="covers/poisonwhiskey.jpg" onclick="toggleDropdown(this)">
 
-<!-- POISON WHISKEY -->
-
-<div class="song"
-onclick="toggleSong(this)"
-data-title="Poison Whiskey"
-data-artist="Lynyrd Skynyrd"
-data-year="1973">
-
-<img src="covers/poisonwhiskey.png">
-
-<div class="song-info">
-
-<div class="song-title">Poison Whiskey</div>
-<div class="artist">Lynyrd Skynyrd</div>
-
-<div class="genre southern">Southern Rock</div>
-
-<div class="diff">
-<div class="bar"><div class="fill" style="width:50%"></div></div>
-<div class="bar"><div class="fill" style="width:40%"></div></div>
-</div>
-
-<div class="details">
-Album: (pronounced 'leh-'nérd 'skin-'nérd)<br>
-Year: 1973<br>
-
-<button class="play-btn" onclick="playSpotify('4EwfTRmjZMPGxrqYIrlCBv')">
-▶ Play Preview
-</button>
-
-</div>
-
+<div class="dropdown">
+<p><b>Song:</b> Poison Whiskey</p>
+<p><b>Artist:</b> Lynyrd Skynyrd</p>
+<p><b>Album:</b> Pronounced 'Lĕh-'nérd 'Skin-'nérd</p>
+<p><b>Year:</b> 1973</p>
+<p><b>Genre:</b> Southern Rock</p>
 </div>
 </div>
 
+<!-- SONG 3 -->
+<div class="song">
+<img src="covers/shattereddreams.jpg" onclick="toggleDropdown(this)">
 
-<!-- REACH FOR THE SKY -->
-
-<div class="song"
-onclick="toggleSong(this)"
-data-title="Reach for the Sky"
-data-artist="Social Distortion"
-data-year="2004">
-
-<img src="covers/reachforthesky.png">
-
-<div class="song-info">
-
-<div class="song-title">Reach for the Sky</div>
-<div class="artist">Social Distortion</div>
-
-<div class="genre punk">Punk</div>
-
-<div class="diff">
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-</div>
-
-<div class="details">
-Album: Sex, Love and Rock 'n' Roll<br>
-Year: 2004<br>
-
-<button class="play-btn" onclick="playSpotify('5eGDKrTYl2h6ponZyMMhgZ')">
-▶ Play Preview
-</button>
-
-</div>
-
+<div class="dropdown">
+<p><b>Song:</b> Shattered Dreams</p>
+<p><b>Artist:</b> Johnny Hates Jazz</p>
+<p><b>Album:</b> Turn Back the Clock</p>
+<p><b>Year:</b> 1987</p>
+<p><b>Genre:</b> New Wave</p>
 </div>
 </div>
 
+<!-- SONG 4 -->
+<div class="song">
+<img src="covers/prisoneroflove.jpg" onclick="toggleDropdown(this)">
 
-<!-- SHATTERED DREAMS -->
-
-<div class="song"
-onclick="toggleSong(this)"
-data-title="Shattered Dreams"
-data-artist="Johnny Hates Jazz"
-data-year="1988">
-
-<img src="covers/shattereddreams.png">
-
-<div class="song-info">
-
-<div class="song-title">Shattered Dreams</div>
-<div class="artist">Johnny Hates Jazz</div>
-
-<div class="genre newwave">New Wave</div>
-
-<div class="diff">
-<div class="bar"><div class="fill" style="width:35%"></div></div>
-<div class="bar"><div class="fill" style="width:30%"></div></div>
-</div>
-
-<div class="details">
-Album: Turn Back the Clock<br>
-Year: 1988<br>
-
-<button class="play-btn" onclick="playSpotify('5KXKhCfPNS4342ly8tTf6w')">
-▶ Play Preview
-</button>
-
-</div>
-
-</div>
-</div>
-
-
-<!-- PRISONER OF LOVE -->
-
-<div class="song"
-onclick="toggleSong(this)"
-data-title="Prisoner of Love"
-data-artist="Tiny Tim"
-data-year="1986">
-
-<img src="covers/prisoneroflove.png">
-
-<div class="song-info">
-
-<div class="song-title">Prisoner of Love</div>
-<div class="artist">Tiny Tim</div>
-
-<div class="genre other">Other</div>
-
-<div class="diff">
-<div class="bar"><div class="fill" style="width:20%"></div></div>
-<div class="bar"><div class="fill" style="width:20%"></div></div>
-</div>
-
-<div class="details">
-Album: Tip Toe Through the Tulips<br>
-Year: 1986<br>
-
-<button class="play-btn" onclick="playSpotify('0geMR6FM2We9JrwZkwHgZ6')">
-▶ Play Preview
-</button>
-
-</div>
-
+<div class="dropdown">
+<p><b>Song:</b> Prisoner of Love</p>
+<p><b>Artist:</b> Foreigner</p>
+<p><b>Album:</b> Agent Provocateur</p>
+<p><b>Year:</b> 1984</p>
+<p><b>Genre:</b> Other</p>
 </div>
 </div>
 
 </div>
-
 
 <footer>
+<p class="footer-note">
 This project is not affiliated with Harmonix. This is entirely a fan-made project.
+</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
