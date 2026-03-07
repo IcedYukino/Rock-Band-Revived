@@ -1,22 +1,41 @@
-async function loadSongs() {
+let songs = [];
+
+async function loadSongs(){
 
 const response = await fetch("songs.json");
-const songs = await response.json();
+songs = await response.json();
+
+displaySongs(songs);
+
+}
+
+function displaySongs(songList){
 
 const grid = document.getElementById("song-grid");
 
-songs.forEach(song => {
+grid.innerHTML = "";
+
+songList.forEach(song => {
 
 const card = document.createElement("div");
 card.className = "song-card";
 
+const genreClass = song.genre
+.toLowerCase()
+.replace(" ","-");
+
 card.innerHTML = `
+
 <img src="${song.cover}" class="song-cover">
 
 <div class="song-info">
 <p class="song-title">${song.title}</p>
 <p class="song-artist">${song.artist}</p>
-<span class="genre">${song.genre}</span>
+
+<span class="genre ${genreClass}">
+${song.genre}
+</span>
+
 </div>
 
 <div class="song-details">
@@ -24,9 +43,10 @@ card.innerHTML = `
 <p>Year: ${song.year}</p>
 <a href="#">▶ Preview</a>
 </div>
+
 `;
 
-card.addEventListener("click", () => {
+card.addEventListener("click",()=>{
 
 const details = card.querySelector(".song-details");
 
@@ -50,18 +70,51 @@ const input = document
 .value
 .toLowerCase();
 
-const cards = document.querySelectorAll(".song-card");
+const filtered = songs.filter(song =>
+song.title.toLowerCase().includes(input) ||
+song.artist.toLowerCase().includes(input)
+);
 
-cards.forEach(card => {
+displaySongs(filtered);
 
-const text = card.innerText.toLowerCase();
+}
 
-card.style.display =
-text.includes(input)
-? "block"
-: "none";
+function sortSongs(){
+
+const type = document.getElementById("sort").value;
+
+let sorted = [...songs];
+
+sorted.sort((a,b)=>{
+
+if(type==="year"){
+return a.year - b.year;
+}
+
+return a[type].localeCompare(b[type]);
 
 });
+
+displaySongs(sorted);
+
+}
+
+function filterGenre(){
+
+const genre = document
+.getElementById("genreFilter")
+.value;
+
+if(genre === "all"){
+displaySongs(songs);
+return;
+}
+
+const filtered = songs.filter(song =>
+song.genre === genre
+);
+
+displaySongs(filtered);
 
 }
 
