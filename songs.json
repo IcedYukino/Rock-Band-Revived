@@ -24,6 +24,33 @@
     "year": 2004,
     "genre": "Punk",
     "cover": "covers/reachforthesky.png",
+    "category": "main"
+  },
+  {
+    "title": "???",
+    "artist": "???",
+    "album": "???",
+    "year": ???,
+    "genre": "???",
+    "cover": "covers/unreleased.png",
     "category": "dlc"
-  }
+  },
+    {
+    "title": "???",
+    "artist": "???",
+    "album": "???",
+    "year": ???,
+    "genre": "???",
+    "cover": "covers/unreleased.png",
+    "category": "dlc"
+  },
+    {
+    "title": "???",
+    "artist": "???",
+    "album": "???",
+    "year": ???,
+    "genre": "???",
+    "cover": "covers/unreleased.png",
+    "category": "dlc"
+  },
 ]
