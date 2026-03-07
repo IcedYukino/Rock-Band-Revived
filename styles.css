@@ -202,6 +202,32 @@ margin:2px 0;
   box-shadow: 0 0 6px #999;
 }
 
+.difficulty-dropdown {
+  margin-top: 10px;
+}
+
+.instrument {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.diff-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+.diff {
+  width: 18px;
+  height: 10px;
+  background: #333;
+  border: 2px solid #111;
+}
+
+.diff.filled {
+  background: #ddd;
+}
+
 footer{
 margin-top:40px;
 color:#666;
