@@ -20,6 +20,23 @@ id="search"
 placeholder="Search songs or artists..."
 onkeyup="searchSongs()"
 >
+
+<br><br>
+
+<select id="sort" onchange="sortSongs()">
+<option value="title">Sort by Title</option>
+<option value="artist">Sort by Artist</option>
+<option value="year">Sort by Year</option>
+</select>
+
+<select id="genreFilter" onchange="filterGenre()">
+<option value="all">All Genres</option>
+<option value="Punk">Punk</option>
+<option value="Southern Rock">Southern Rock</option>
+<option value="New Wave">New Wave</option>
+<option value="Other">Other</option>
+</select>
+
 </header>
 
 <main>
