@@ -8,6 +8,15 @@
     "cover": "covers/doctordoctor.png",
     "category": "main"
   },
+    {
+    "title": "Falling and Laughing",
+    "artist": "Orange Juice",
+    "album": "You Can't Hide Your Love Forever",
+    "year": 1982,
+    "genre": "New Wave",
+    "cover": "covers/fallingandlaughing.png",
+    "category": "main"
+  },
   {
     "title": "Needles and Pins",
     "artist": "Ramones",
