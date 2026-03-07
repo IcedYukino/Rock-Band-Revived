@@ -1,0 +1,151 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#111;
+color:white;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:30px 20px;
+}
+
+.logo{
+max-width:420px;
+width:100%;
+}
+
+.subtitle{
+font-size:12px;
+color:#aaa;
+margin-top:6px;
+}
+
+/* CONTROLS */
+
+.controls{
+text-align:center;
+margin-bottom:20px;
+}
+
+input, select{
+padding:8px 10px;
+margin:5px;
+border:none;
+border-radius:5px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(8,1fr);
+gap:18px;
+padding:40px;
+max-width:1800px;
+margin:auto;
+}
+
+/* SONG CARD */
+
+.song{
+background:#1a1a1a;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,0.5);
+cursor:pointer;
+}
+
+.song img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+}
+
+.song-info{
+padding:10px;
+text-align:center;
+}
+
+.song-title{
+font-size:15px;
+font-weight:bold;
+}
+
+.artist{
+font-size:13px;
+color:#bbb;
+}
+
+/* GENRE TAG */
+
+.genre{
+font-size:11px;
+padding:2px 6px;
+border-radius:4px;
+display:inline-block;
+margin-top:4px;
+}
+
+.punk{background:#ff3b3b;}
+.southern{background:#ff9f1c;}
+.newwave{background:#2ec4b6;}
+.other{background:#888;}
+
+/* DIFFICULTY BAR */
+
+.diff{
+margin-top:6px;
+}
+
+.bar{
+height:5px;
+background:#333;
+margin:2px 0;
+}
+
+.fill{
+height:5px;
+background:#4da3ff;
+}
+
+/* DETAILS */
+
+.details{
+display:none;
+font-size:12px;
+color:#ccc;
+margin-top:6px;
+}
+
+.song.active .details{
+display:block;
+}
+
+/* SPOTIFY BUTTON */
+
+.play-btn{
+margin-top:8px;
+padding:6px 10px;
+font-size:12px;
+background:#1db954;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.play-btn:hover{
+background:#1ed760;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+font-size:12px;
+color:#888;
+padding:30px;
+}
