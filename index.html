@@ -12,31 +12,35 @@
 
 <header class="header">
 
-<div class="logo-area">
+<div class="header-left">
   <img src="assets/logo.png" class="logo">
-  <p class="subtitle">A community-made setlist for the Rock Band series.</p>
+  <div class="title-group">
+    <h1 class="title">Rock Band Revived</h1>
+    <p class="subtitle">A community-made setlist for the Rock Band series.</p>
+  </div>
 </div>
 
-<input
-type="text"
-id="search"
-placeholder="Search songs or artists..."
-onkeyup="searchSongs()"
->
+<div class="header-center">
 
-<button id="randomSong">🎲 Random Song</button>
+  <input
+  type="text"
+  id="search"
+  placeholder="Search songs or artists..."
+  onkeyup="searchSongs()"
+  >
 
-<div class="tabs">
-  <button class="tab active" onclick="switchTab('main', this)">
-    Main Setlist
-  </button>
+  <button id="randomSong">🎲 Random Song</button>
 
-  <button class="tab" onclick="switchTab('dlc', this)">
-    DLC
-  </button>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('main', this)">Main Setlist</button>
+    <button class="tab" onclick="switchTab('dlc', this)">DLC</button>
+  </div>
+
 </div>
 
-<p id="song-count"></p>
+<div class="header-right">
+  <p id="song-count"></p>
+</div>
 
 </header>
 
