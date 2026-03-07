@@ -356,6 +356,26 @@ background:#ff2d2d !important;
 box-shadow:0 0 6px #ff2d2d;
 }
 
+.search-area{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+#randomSong{
+background:#222;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+#randomSong:hover{
+background:#333;
+}
+
 /* Footer */
 
 footer{
