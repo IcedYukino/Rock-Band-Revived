@@ -17,6 +17,47 @@ padding:30px;
   padding: 20px;
 }
 
+.genre {
+  display: inline-block;
+  padding: 5px 12px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.punk {
+  background: #ff2b2b;
+  box-shadow: 0 0 8px #ff2b2b;
+}
+
+.southern-rock {
+  background: #ff8c00;
+  box-shadow: 0 0 8px #ff8c00;
+}
+
+.new-wave {
+  background: #a855f7;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+.metal {
+  background: #9ca3af;
+  box-shadow: 0 0 8px #9ca3af;
+}
+
+.pop-dance-electronic {
+  background: #00cfff;
+  box-shadow: 0 0 8px #00cfff;
+}
+
+.other {
+  background: #4b5563;
+  box-shadow: 0 0 8px #4b5563;
+}
+
 .logo {
   height: 80px;
   object-fit: contain;
