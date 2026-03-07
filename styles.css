@@ -85,8 +85,11 @@ padding:15px;
 border-radius:10px;
 transition:.25s;
 cursor:pointer;
-position:relative;
-min-height:310px;
+height:340px;   /* fixed card height */
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
 }
 
 .song:hover{
@@ -172,31 +175,18 @@ box-shadow:0 0 6px #999;
 /* Difficulty dropdown (overlay version) */
 
 .difficulty-dropdown{
-position:absolute;
-left:0;
-right:0;
-top:210px; /* sits below album art */
-
-background:#141414;
-padding:12px;
-
+max-height:0;
+overflow:hidden;
+transition:max-height .25s ease;
+margin-top:10px;
 border-top:1px solid #333;
-border-radius:0 0 10px 10px;
-
-opacity:0;
-transform:translateY(10px);
-pointer-events:none;
-
-transition:.25s;
-z-index:5;
+padding-top:0;
 }
 
 .difficulty-dropdown.open{
-opacity:1;
-transform:translateY(0);
-pointer-events:auto;
+max-height:140px;
+padding-top:8px;
 }
-
 /* Instruments */
 
 .instrument{
