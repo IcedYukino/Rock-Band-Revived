@@ -1,39 +1,7 @@
-const songs = [
-{
-title:"Needles and Pins",
-artist:"Ramones",
-album:"Road to Ruin",
-year:1978,
-genre:"Punk",
-cover:"covers/needlesandpins.png"
-},
-{
-title:"Poison Whiskey",
-artist:"Lynyrd Skynyrd",
-album:"Pronounced Leh-Nerd Skin-Nerd",
-year:1973,
-genre:"Southern Rock",
-cover:"covers/poisonwhiskey.png"
-},
-{
-title:"Shattered Dreams",
-artist:"Johnny Hates Jazz",
-album:"Turn Back the Clock",
-year:1988,
-genre:"New Wave",
-cover:"covers/shattereddreams.png"
-},
-{
-title:"Prisoner of Love",
-artist:"Tiny Tim",
-album:"Tip Toe Through the Tulips",
-year:1986,
-genre:"Other",
-cover:"covers/prisoneroflove.png"
-}
-];
+async function loadSongs() {
 
-function loadSongs(){
+const response = await fetch("songs.json");
+const songs = await response.json();
 
 const grid = document.getElementById("song-grid");
 
@@ -58,7 +26,7 @@ card.innerHTML = `
 </div>
 `;
 
-card.onclick = () => {
+card.addEventListener("click", () => {
 
 const details = card.querySelector(".song-details");
 
@@ -67,7 +35,7 @@ details.style.display === "block"
 ? "none"
 : "block";
 
-};
+});
 
 grid.appendChild(card);
 
