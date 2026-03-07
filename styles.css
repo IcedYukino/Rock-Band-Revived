@@ -1,17 +1,17 @@
-/* GLOBAL */
+/* ---------------- GLOBAL ---------------- */
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
+background:#0a0a0a;
 color:white;
 }
 
-/* HEADER */
+/* ---------------- HEADER ---------------- */
 
 header{
 text-align:center;
-padding:40px 20px 10px;
+padding:50px 20px 10px;
 }
 
 .logo{
@@ -21,73 +21,91 @@ width:100%;
 
 .logo-note{
 font-size:12px;
-color:#aaa;
+color:#9c9c9c;
 margin-top:6px;
 }
 
-/* GRID */
+/* ---------------- SONG GRID ---------------- */
 
 .song-grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-gap:24px;
-padding:40px;
-max-width:1200px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:32px;
+
+max-width:1100px;
 margin:auto;
+padding:40px 20px;
 }
 
-/* SONG CARD */
+/* ---------------- SONG CARD ---------------- */
 
 .song{
-background:#181818;
-border-radius:12px;
+background:#171717;
+border-radius:14px;
 overflow:visible;
-box-shadow:0 8px 22px rgba(0,0,0,0.6);
-transition:transform .15s ease;
 position:relative;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+
+transition:
+transform .2s ease,
+box-shadow .2s ease;
 }
 
 .song:hover{
-transform:translateY(-4px);
+transform:translateY(-6px) scale(1.03);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.9),
+0 0 12px rgba(0,150,255,0.3);
 }
 
-/* COVER */
+/* ---------------- COVER ---------------- */
 
 .song img{
 width:100%;
 aspect-ratio:1/1;
 object-fit:cover;
-border-radius:12px 12px 0 0;
+
+border-radius:14px 14px 0 0;
+
 cursor:pointer;
+
+transition:transform .25s ease;
 }
 
-/* SONG INFO */
+.song:hover img{
+transform:scale(1.05);
+}
+
+/* ---------------- SONG INFO ---------------- */
 
 .song-info{
 text-align:center;
-padding:12px 10px 14px;
+padding:14px 10px 16px;
 }
 
 .song-info h3{
-font-size:15px;
-margin:4px 0;
+font-size:16px;
+margin:5px 0;
 }
 
 .artist{
 font-size:13px;
-color:#bbb;
+color:#b5b5b5;
 margin:0;
 }
 
-/* GENRE TAG */
+/* ---------------- GENRE TAG ---------------- */
 
 .genre{
 font-size:11px;
-padding:3px 8px;
-border-radius:6px;
+padding:4px 9px;
+border-radius:8px;
 display:inline-block;
-margin-top:6px;
+margin-top:7px;
 font-weight:bold;
+
+animation:tagPulse 3s infinite ease-in-out;
 }
 
 /* GENRE COLORS */
@@ -105,71 +123,115 @@ background:#2ec4b6;
 }
 
 .other{
-background:#777;
+background:#7a7a7a;
 }
 
-/* DROPDOWN PANEL */
+/* GENRE ANIMATION */
+
+@keyframes tagPulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
+
+/* ---------------- DROPDOWN ---------------- */
 
 .dropdown{
 display:none;
+
 position:absolute;
 left:0;
 right:0;
 top:100%;
-margin-top:8px;
+margin-top:10px;
 
-background:#121212;
+background:#111;
 border-radius:10px;
+
 padding:12px;
 
 font-size:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.7);
 
-animation:fadeIn .15s ease-in-out;
-z-index:5;
+box-shadow:0 8px 24px rgba(0,0,0,0.8);
+
+animation:dropdownFade .18s ease;
+
+z-index:10;
 }
 
 .dropdown p{
 margin:4px 0;
-color:#ccc;
+color:#c7c7c7;
 }
 
-/* SPOTIFY BUTTON */
+/* ---------------- PREVIEW BUTTON ---------------- */
 
 .dropdown a{
 display:inline-block;
-margin-top:8px;
-padding:6px 12px;
+
+margin-top:10px;
+padding:7px 14px;
+
 background:#1db954;
 color:white;
-text-decoration:none;
+
 font-size:12px;
+text-decoration:none;
+
 border-radius:6px;
-transition:.15s;
+
+transition:
+transform .1s ease,
+background .15s ease;
 }
 
 .dropdown a:hover{
 background:#1ed760;
+transform:scale(1.08);
 }
 
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
 
 footer{
 text-align:center;
 font-size:12px;
 color:#888;
-padding:40px;
+
+padding:40px 20px;
 }
 
-/* ANIMATION */
+/* ---------------- ANIMATIONS ---------------- */
 
-@keyframes fadeIn{
+@keyframes dropdownFade{
 from{
 opacity:0;
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 to{
 opacity:1;
 transform:translateY(0);
 }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:700px){
+
+.song-grid{
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+}
+
+.song-info h3{
+font-size:14px;
+}
+
+.artist{
+font-size:12px;
+}
+
+.logo{
+max-width:300px;
+}
+
 }
