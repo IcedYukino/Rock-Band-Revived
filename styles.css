@@ -102,6 +102,10 @@ background:#333;
 background:#0aa3ff;
 }
 
+.song-card .genre {
+  margin-top: 8px;
+}
+
 /* Song grid */
 
 .song-grid{
