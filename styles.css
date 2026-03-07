@@ -1,3 +1,5 @@
+/* Base layout */
+
 body{
 font-family: Arial, sans-serif;
 background:#111;
@@ -10,63 +12,26 @@ header{
 padding:30px;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.genre {
-  display: inline-block;
-  padding: 5px 12px;
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 14px;
-  color: white;
-  text-transform: uppercase;
-}
-
-.punk {
-  background: #ff2b2b;
-  box-shadow: 0 0 8px #ff2b2b;
-}
-
-.southern-rock {
-  background: #ff8c00;
-  box-shadow: 0 0 8px #ff8c00;
-}
-
-.new-wave {
-  background: #a855f7;
-  box-shadow: 0 0 8px #a855f7;
-}
-
-.metal {
-  background: #9ca3af;
-  box-shadow: 0 0 8px #9ca3af;
-}
-
-.pop-dance-electronic {
-  background: #00cfff;
-  box-shadow: 0 0 8px #00cfff;
-}
-
-.other {
-  background: #4b5563;
-  box-shadow: 0 0 8px #4b5563;
-}
-
-.logo {
-  height: 80px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+.logo{
+height:80px;
+object-fit:contain;
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 }
 
 .subtitle{
 color:#bbb;
+margin:0;
 }
+
+/* Search */
 
 #search{
 padding:10px;
@@ -102,42 +67,34 @@ background:#333;
 background:#0aa3ff;
 }
 
-.song-card .genre {
-  margin-top: 8px;
-}
-
 /* Song grid */
 
 .song-grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fill,200px);
 justify-content:center;
 gap:25px;
 padding:40px;
-
 }
 
-.song{
+/* Song card */
 
+.song{
 background:#1a1a1a;
 padding:15px;
 border-radius:10px;
 transition:.25s;
+cursor:pointer;
 }
 
 .song:hover{
-
 transform:scale(1.05);
 box-shadow:0 0 15px #0aa3ff;
-
 }
 
 .song img{
-
 width:100%;
 border-radius:6px;
-
 }
 
 .song h3{
@@ -151,104 +108,117 @@ font-size:14px;
 margin:2px 0;
 }
 
-.genre-tag {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: bold;
+/* Genre tags */
+
+.genre-tag{
+display:inline-block;
+margin-top:6px;
+padding:4px 10px;
+border-radius:12px;
+font-size:11px;
+font-weight:bold;
 }
 
 /* Punk */
-.punk {
-  background: #ff2d2d;
-  color: white;
-  box-shadow: 0 0 8px #ff2d2d;
+
+.punk{
+background:#ff2d2d;
+color:white;
+box-shadow:0 0 8px #ff2d2d;
 }
 
 /* Southern Rock */
-.southernrock {
-  background: #ff8c00;
-  color: white;
-  box-shadow: 0 0 8px #ff8c00;
+
+.southernrock{
+background:#ff8c00;
+color:white;
+box-shadow:0 0 8px #ff8c00;
 }
 
 /* Metal */
-.metal {
-  background: #9ea2a8;
-  color: white;
-  box-shadow: 0 0 8px #9ea2a8;
+
+.metal{
+background:#9ea2a8;
+color:white;
+box-shadow:0 0 8px #9ea2a8;
 }
 
 /* Pop / Dance / Electronic */
-.popdanceelectronic {
-  background: #00cfff;
-  color: white;
-  box-shadow: 0 0 8px #00cfff;
+
+.popdanceelectronic{
+background:#00cfff;
+color:white;
+box-shadow:0 0 8px #00cfff;
 }
 
 /* New Wave */
-.newwave {
-  background: #a855f7;
-  color: white;
-  box-shadow: 0 0 8px #a855f7;
+
+.newwave{
+background:#a855f7;
+color:white;
+box-shadow:0 0 8px #a855f7;
 }
 
 /* Other */
-.other {
-  background: #666;
-  color: white;
-  box-shadow: 0 0 6px #999;
+
+.other{
+background:#666;
+color:white;
+box-shadow:0 0 6px #999;
 }
 
-.difficulty-dropdown {
-  margin-top: 10px;
+/* Difficulty dropdown */
+
+.difficulty-dropdown{
+max-height:0;
+overflow:hidden;
+transition:max-height .25s ease;
+margin-top:12px;
+border-top:1px solid #333;
+padding-top:8px;
 }
 
-.instrument {
-  margin-bottom: 8px;
-  font-size: 12px;
+.difficulty-dropdown.open{
+max-height:200px;
 }
 
-.diff-row {
-  display: flex;
-  gap: 4px;
-  margin-top: 3px;
+/* Instruments */
+
+.instrument{
+margin-bottom:10px;
+font-size:12px;
 }
 
-.diff {
-  width: 18px;
-  height: 10px;
-  background: #333;
-  border: 2px solid #111;
+.instrument span{
+display:block;
+margin-bottom:3px;
+color:#ccc;
 }
 
-.diff.filled {
-  background: #ddd;
+/* Difficulty bars */
+
+.diff-row{
+display:flex;
+gap:4px;
+justify-content:center;
 }
+
+.diff{
+width:18px;
+height:10px;
+background:#333;
+border:2px solid #111;
+border-radius:2px;
+}
+
+.diff.filled{
+background:#ddd;
+}
+
+/* Footer */
 
 footer{
 margin-top:40px;
 color:#666;
 padding:20px;
-}
-
-.difficulty-toggle{
-margin-top:8px;
-background:#111;
-border:1px solid #444;
-color:white;
-padding:6px 10px;
-border-radius:6px;
-cursor:pointer;
-}
-
-.difficulty-dropdown{
-display:none;
-margin-top:8px;
-}
-
-.difficulty-dropdown.open{
-display:block;
 }
