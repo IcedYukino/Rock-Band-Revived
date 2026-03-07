@@ -85,6 +85,7 @@ padding:15px;
 border-radius:10px;
 transition:.25s;
 cursor:pointer;
+position:relative;   /* important for overlay dropdown */
 }
 
 .song:hover{
@@ -167,19 +168,31 @@ color:white;
 box-shadow:0 0 6px #999;
 }
 
-/* Difficulty dropdown */
+/* Difficulty dropdown (overlay version) */
 
 .difficulty-dropdown{
-max-height:0;
-overflow:hidden;
-transition:max-height .25s ease;
-margin-top:12px;
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+
+background:#141414;
+padding:12px;
+
 border-top:1px solid #333;
-padding-top:8px;
+border-radius:0 0 10px 10px;
+
+opacity:0;
+transform:translateY(10px);
+pointer-events:none;
+
+transition:.25s;
 }
 
 .difficulty-dropdown.open{
-max-height:200px;
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
 /* Instruments */
@@ -187,6 +200,7 @@ max-height:200px;
 .instrument{
 margin-bottom:10px;
 font-size:12px;
+text-align:center;
 }
 
 .instrument span{
@@ -217,9 +231,6 @@ background:#ddd;
 .diff.red{
 background:#ff2d2d !important;
 box-shadow:0 0 6px #ff2d2d;
-}
-.diff.filled{
-background:#ddd;
 }
 
 /* Footer */
