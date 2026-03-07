@@ -112,3 +112,15 @@ button.classList.add("active");
 displaySongs(songs);
 
 }
+
+document.addEventListener("click", function(e){
+
+if(e.target.classList.contains("difficulty-toggle")){
+
+const dropdown = e.target.nextElementSibling;
+
+dropdown.classList.toggle("open");
+
+}
+
+}
