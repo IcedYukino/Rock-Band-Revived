@@ -75,57 +75,6 @@ dropdown.classList.toggle("open");
 
 }
 
-/* Header layout */
-
-.header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 40px;
-}
-
-/* LEFT */
-
-.header-left{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.title{
-margin:0;
-font-size:22px;
-}
-
-.subtitle{
-margin:0;
-font-size:13px;
-color:#bbb;
-}
-
-/* CENTER */
-
-.header-center{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-/* RIGHT */
-
-.header-right{
-font-size:14px;
-color:#ddd;
-}
-
-/* Logo */
-
-.logo{
-height:60px;
-object-fit:contain;
-filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
-}
-
 function createDifficulty(level) {
 
 let bars = "";
