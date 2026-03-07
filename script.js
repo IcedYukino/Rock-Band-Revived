@@ -125,14 +125,34 @@ displaySongs(songs);
 
 document.getElementById("randomSong").addEventListener("click", () => {
 
-const visibleSongs = songs.filter(song => {
-return currentCategory === "all" || song.category === currentCategory;
-});
+const visibleSongs = songs.filter(song => song.category === currentTab);
 
 const random = visibleSongs[Math.floor(Math.random() * visibleSongs.length)];
 
-document.getElementById("search").value = random.title;
+displaySongs(visibleSongs);
 
-renderSongs([random]);
+setTimeout(() => {
+
+const cards = document.querySelectorAll(".song");
+
+cards.forEach(card => {
+
+if(card.querySelector("h3").innerText === random.title){
+
+card.scrollIntoView({
+behavior: "smooth",
+block: "center"
+});
+
+card.style.boxShadow = "0 0 25px #0aa3ff";
+
+const dropdown = card.querySelector(".difficulty-dropdown");
+dropdown.classList.add("open");
+
+}
+
+});
+
+}, 100);
 
 });
