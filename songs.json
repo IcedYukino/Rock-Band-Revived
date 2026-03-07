@@ -8,7 +8,7 @@
     "cover": "covers/doctordoctor.png",
     "category": "main"
   },
-    {
+  {
     "title": "Falling and Laughing",
     "artist": "Orange Juice",
     "album": "You Can't Hide Your Love Forever",
@@ -35,7 +35,7 @@
     "cover": "covers/poisonwhiskey.png",
     "category": "main"
   },
-    {
+  {
     "title": "Prisoner of Love",
     "artist": "Tiny Tim",
     "album": "Tip Toe Through the Tulips",
@@ -53,7 +53,7 @@
     "cover": "covers/reachforthesky.png",
     "category": "main"
   },
-    {
+  {
     "title": "Shattered Dreams",
     "artist": "Johnny Hates Jazz",
     "album": "Turn Back the Clock",
@@ -62,7 +62,7 @@
     "cover": "covers/shattereddreams.png",
     "category": "main"
   },
-    {
+  {
     "title": "Wasted Sacrifice",
     "artist": "Killswitch Engage",
     "album": "The End of Heartache",
@@ -107,7 +107,7 @@
     "cover": "covers/didntiblowyourmindthistime.png",
     "category": "dlc"
   },
-    {
+  {
     "title": "I Love Music",
     "artist": "The O'Jays",
     "album": "Family Reunion",
@@ -116,7 +116,7 @@
     "cover": "covers/ilovemusic.png",
     "category": "dlc"
   },
-    {
+  {
     "title": "Ten Percent",
     "artist": "Double Exposure",
     "album": "Ten Percent",
