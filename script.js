@@ -120,5 +120,19 @@ btn.classList.remove("active");
 button.classList.add("active");
 
 displaySongs(songs);
-
+  
 }
+
+document.getElementById("randomSong").addEventListener("click", () => {
+
+const visibleSongs = songs.filter(song => {
+return currentCategory === "all" || song.category === currentCategory;
+});
+
+const random = visibleSongs[Math.floor(Math.random() * visibleSongs.length)];
+
+document.getElementById("search").value = random.title;
+
+renderSongs([random]);
+
+});
