@@ -151,6 +151,57 @@ font-size:14px;
 margin:2px 0;
 }
 
+.genre-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Punk */
+.punk {
+  background: #ff2d2d;
+  color: white;
+  box-shadow: 0 0 8px #ff2d2d;
+}
+
+/* Southern Rock */
+.southernrock {
+  background: #ff8c00;
+  color: white;
+  box-shadow: 0 0 8px #ff8c00;
+}
+
+/* Metal */
+.metal {
+  background: #9ea2a8;
+  color: white;
+  box-shadow: 0 0 8px #9ea2a8;
+}
+
+/* Pop / Dance / Electronic */
+.popdanceelectronic {
+  background: #00cfff;
+  color: white;
+  box-shadow: 0 0 8px #00cfff;
+}
+
+/* New Wave */
+.newwave {
+  background: #a855f7;
+  color: white;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+/* Other */
+.other {
+  background: #666;
+  color: white;
+  box-shadow: 0 0 6px #999;
+}
+
 footer{
 margin-top:40px;
 color:#666;
