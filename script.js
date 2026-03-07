@@ -1,3 +1,19 @@
+let currentTab = "main";
+
+function switchTab(tab){
+
+currentTab = tab;
+
+document.querySelectorAll(".tab").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+event.target.classList.add("active");
+
+displaySongs(songs);
+
+}
+
 let songs = [];
 
 async function loadSongs(){
@@ -12,9 +28,16 @@ displaySongs(songs);
 function displaySongs(songList){
 
 const grid = document.getElementById("song-grid");
-
 grid.innerHTML = "";
 
+const filteredSongs = songList.filter(song =>
+song.category === currentTab
+);
+
+document.getElementById("song-count").innerText =
+filteredSongs.length + " songs";
+
+filteredSongs.forEach(song => {
 /* UPDATE SONG COUNT */
 
 document.getElementById("song-count").innerText =
