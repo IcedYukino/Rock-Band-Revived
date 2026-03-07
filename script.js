@@ -15,6 +15,11 @@ const grid = document.getElementById("song-grid");
 
 grid.innerHTML = "";
 
+/* UPDATE SONG COUNT */
+
+document.getElementById("song-count").innerText =
+songList.length + " songs";
+
 songList.forEach(song => {
 
 const card = document.createElement("div");
@@ -60,7 +65,6 @@ details.style.display === "block"
 grid.appendChild(card);
 
 });
-
 }
 
 function searchSongs(){
