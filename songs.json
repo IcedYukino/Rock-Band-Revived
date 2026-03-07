@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Needles and Pins",
+    "artist": "Ramones",
+    "album": "Road to Ruin",
+    "year": 1978,
+    "genre": "Punk",
+    "cover": "covers/needlesandpins.png"
+  },
+  {
+    "title": "Poison Whiskey",
+    "artist": "Lynyrd Skynyrd",
+    "album": "Pronounced Leh-Nerd Skin-Nerd",
+    "year": 1973,
+    "genre": "Southern Rock",
+    "cover": "covers/poisonwhiskey.png"
+  },
+  {
+    "title": "Shattered Dreams",
+    "artist": "Johnny Hates Jazz",
+    "album": "Turn Back the Clock",
+    "year": 1988,
+    "genre": "New Wave",
+    "cover": "covers/shattereddreams.png"
+  },
+  {
+    "title": "Reach for the Sky",
+    "artist": "Social Distortion",
+    "album": "Sex, Love and Rock 'n' Roll",
+    "year": 2004,
+    "genre": "Punk",
+    "cover": "covers/reachforthesky.png"
+  },
+  {
+    "title": "Prisoner of Love",
+    "artist": "Tiny Tim",
+    "album": "Tip Toe Through the Tulips",
+    "year": 1986,
+    "genre": "Other",
+    "cover": "covers/prisoneroflove.png"
+  }
+]
