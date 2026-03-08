@@ -168,6 +168,34 @@ margin:2px 0;
 box-shadow:0 0 20px #0aa3ff;
 }
 
+.song-rating{
+position:absolute;
+right:15px;
+top:230px;
+font-weight:bold;
+font-size:14px;
+padding:4px 8px;
+border-radius:6px;
+}
+
+/* Not Rated */
+
+.song-rating.NR{
+color:#999;
+}
+
+/* Family Friendly */
+
+.song-rating.FF{
+color:#22c55e;
+}
+
+/* Supervision Recommened */
+
+.song-rating.SR{
+color:#facc15;
+}
+
 /* Genre tags */
 
 .genre-tag{
