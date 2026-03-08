@@ -27,6 +27,8 @@ filtered.forEach(song => {
 const card = document.createElement("div");
 card.className = "song";
 
+const rating = song.rating || "NR";
+
 card.innerHTML = `
 <img src="${song.cover}">
 
@@ -47,28 +49,24 @@ ${rating}
 
 <div class="difficulty-dropdown">
 
-  <div class="instrument">
-    <span>Guitar</span>
-    ${createDifficulty(song.difficulty?.guitar ?? 0)}
-  </div>
+<div class="instrument">
+<span>Guitar</span>
+${createDifficulty(song.difficulty?.guitar ?? 0)}
+</div>
 
-  <div class="instrument">
-    <span>Bass</span>
-    ${createDifficulty(song.difficulty?.bass ?? 0)}
-  </div>
+<div class="instrument">
+<span>Bass</span>
+${createDifficulty(song.difficulty?.bass ?? 0)}
+</div>
 
-  <div class="instrument">
-    <span>Drums</span>
-    ${createDifficulty(song.difficulty?.drums ?? 0)}
-  </div>
+<div class="instrument">
+<span>Drums</span>
+${createDifficulty(song.difficulty?.drums ?? 0)}
+</div>
 
-  <div class="instrument">
-    <span>Vocals</span>
-    ${createDifficulty(song.difficulty?.vocals ?? 0)}
-  </div>
-
-  <div class="song-rating ${song.rating}">
-${song.rating || "NR"}
+<div class="instrument">
+<span>Vocals</span>
+${createDifficulty(song.difficulty?.vocals ?? 0)}
 </div>
 
 </div>
