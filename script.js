@@ -33,9 +33,17 @@ card.innerHTML = `
 <h3>${song.title}</h3>
 <p>${song.artist}</p>
 
+<div class="genre-row">
+
 <span class="genre-tag ${song.genre.toLowerCase().replace(/[^a-z]/g,'')}">
 ${song.genre}
 </span>
+
+<span class="song-rating ${rating}">
+${rating}
+</span>
+
+</div>
 
 <div class="difficulty-dropdown">
 
