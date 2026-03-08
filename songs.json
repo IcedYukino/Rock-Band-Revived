@@ -77,14 +77,14 @@
     "cover": "covers/wastedsacrifice.png",
     "category": "main"
   },
-    {
+  {
     "title": "Analysis Paralysis",
     "artist": "Awake at Last",
     "album": "Life/Death/Rebirth",
     "year": "2017",
     "genre": "Metal",
     "cover": "covers/analysisparalysis.png",
-    "category": "dlc"
+    "category": "dlc",
     "difficulty": {
       "guitar": 3,
       "bass": 0,
@@ -99,7 +99,7 @@
     "year": "1965",
     "genre": "Classic Rock",
     "cover": "covers/claustrophobia.png",
-    "category": "dlc"
+    "category": "dlc",
     "difficulty": {
       "guitar": 0,
       "bass": 0,
@@ -161,7 +161,7 @@
     "cover": "covers/tenpercent.png",
     "category": "dlc"
   },
-    {
+  {
     "title": "Hot Streets",
     "artist": "Chicago",
     "album": "Hot Streets",
@@ -179,7 +179,7 @@
     "cover": "covers/ihadmyfunbacktothestart.png",
     "category": "dlc"
   },
-    {
+  {
     "title": "Rainy Days and Mondays",
     "artist": "The Intruders",
     "album": "Energy of Love",
