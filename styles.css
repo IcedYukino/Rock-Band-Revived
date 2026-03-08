@@ -141,6 +141,7 @@ cursor:pointer;
 display:flex;
 flex-direction:column;
 align-items:center;
+position:relative;
 }
 
 .song:hover{
@@ -168,6 +169,8 @@ margin:2px 0;
 box-shadow:0 0 20px #0aa3ff;
 }
 
+/* Song rating */
+
 .song-rating{
 position:absolute;
 right:15px;
@@ -190,7 +193,7 @@ color:#999;
 color:#22c55e;
 }
 
-/* Supervision Recommened */
+/* Supervision Recommended */
 
 .song-rating.SR{
 color:#facc15;
