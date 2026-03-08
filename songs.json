@@ -85,6 +85,12 @@
     "genre": "Metal",
     "cover": "covers/analysisparalysis.png",
     "category": "dlc"
+    "difficulty": {
+      "guitar": 3,
+      "bass": 0,
+      "drums": 6,
+      "vocals": 0
+    }
   },
   {
     "title": "Claustrophobia",
@@ -94,6 +100,12 @@
     "genre": "Classic Rock",
     "cover": "covers/claustrophobia.png",
     "category": "dlc"
+    "difficulty": {
+      "guitar": 0,
+      "bass": 0,
+      "drums": 1,
+      "vocals": 1
+    }
   },
   {
     "title": "Over You",
