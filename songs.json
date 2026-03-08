@@ -81,7 +81,7 @@
     "title": "Analysis Paralysis",
     "artist": "Awake at Last",
     "album": "Life/Death/Rebirth",
-    "year": "2017",
+    "year": 2017,
     "genre": "Metal",
     "cover": "covers/analysisparalysis.png",
     "category": "dlc",
@@ -96,7 +96,7 @@
     "title": "Claustrophobia",
     "artist": "Bee Gees",
     "album": "The Bee Gees Sing and Play 14 Barry Gibb Songs",
-    "year": "1965",
+    "year": 1965,
     "genre": "Classic Rock",
     "cover": "covers/claustrophobia.png",
     "category": "dlc",
@@ -111,7 +111,7 @@
     "title": "Over You",
     "artist": "Gary Puckett and the Union Gap",
     "album": "Incredible",
-    "year": "1968",
+    "year": 1968,
     "genre": "Classic Rock",
     "cover": "covers/overyou.png",
     "category": "dlc"
@@ -120,7 +120,7 @@
     "title": "She May Call You Up Tonight",
     "artist": "The Left Banke",
     "album": "Walk Away Renée/Pretty Ballerina",
-    "year": "1967",
+    "year": 1967,
     "genre": "Classic Rock",
     "cover": "covers/shemaycallyouuptonight.png",
     "category": "dlc"
@@ -129,7 +129,7 @@
     "title": "Technicolour Dream",
     "artist": "The Alan Bown",
     "album": "Outward Bown",
-    "year": "1968",
+    "year": 1968,
     "genre": "Classic Rock",
     "cover": "covers/technicolourdream.png",
     "category": "dlc"
@@ -138,7 +138,7 @@
     "title": "Didn't I (Blow Your Mind This Time)",
     "artist": "The Delfonics",
     "album": "The Delfonics",
-    "year": "1970",
+    "year": 1970,
     "genre": "R&B/Soul/Funk",
     "cover": "covers/didntiblowyourmindthistime.png",
     "category": "dlc"
@@ -147,7 +147,7 @@
     "title": "I Love Music",
     "artist": "The O'Jays",
     "album": "Family Reunion",
-    "year": "1975",
+    "year": 1975,
     "genre": "R&B/Soul/Funk",
     "cover": "covers/ilovemusic.png",
     "category": "dlc"
@@ -156,7 +156,7 @@
     "title": "Ten Percent",
     "artist": "Double Exposure",
     "album": "Ten Percent",
-    "year": "1976",
+    "year": 1976,
     "genre": "R&B/Soul/Funk",
     "cover": "covers/tenpercent.png",
     "category": "dlc"
@@ -165,7 +165,7 @@
     "title": "Hot Streets",
     "artist": "Chicago",
     "album": "Hot Streets",
-    "year": "1978",
+    "year": 1978,
     "genre": "Classic Rock",
     "cover": "covers/hotstreets.png",
     "category": "dlc"
@@ -174,7 +174,7 @@
     "title": "i had my fun/back to the start",
     "artist": "Field Medic",
     "album": "grow your hair long if you're wanting to see something that you can change",
-    "year": "2022",
+    "year": 2022,
     "genre": "Indie Rock",
     "cover": "covers/ihadmyfunbacktothestart.png",
     "category": "dlc"
@@ -183,7 +183,7 @@
     "title": "Rainy Days and Mondays",
     "artist": "The Intruders",
     "album": "Energy of Love",
-    "year": "1975",
+    "year": 1975,
     "genre": "R&B/Soul/Funk",
     "cover": "covers/rainydaysandmondays.png",
     "category": "dlc"
