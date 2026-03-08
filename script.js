@@ -59,6 +59,10 @@ ${song.genre}
     ${createDifficulty(song.difficulty?.vocals ?? 0)}
   </div>
 
+  <div class="song-rating ${song.rating}">
+${song.rating || "NR"}
+</div>
+
 </div>
 `;
 
