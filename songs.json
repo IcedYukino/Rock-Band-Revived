@@ -77,6 +77,24 @@
     "cover": "covers/wastedsacrifice.png",
     "category": "main"
   },
+    {
+    "title": "Analysis Paralysis",
+    "artist": "Awake at Last",
+    "album": "Life/Death/Rebirth",
+    "year": "2017",
+    "genre": "Metal",
+    "cover": "covers/analysisparalysis.png",
+    "category": "dlc"
+  },
+  {
+    "title": "Claustrophobia",
+    "artist": "Bee Gees",
+    "album": "The Bee Gees Sing and Play 14 Barry Gibb Songs",
+    "year": "1965",
+    "genre": "Classic Rock",
+    "cover": "covers/claustrophobia.png",
+    "category": "dlc"
+  },
   {
     "title": "Over You",
     "artist": "Gary Puckett and the Union Gap",
