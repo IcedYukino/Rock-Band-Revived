@@ -39,7 +39,8 @@
     "year": 1973,
     "genre": "Southern Rock",
     "cover": "covers/poisonwhiskey.png",
-    "category": "main"
+    "category": "main",
+    "rating": "SR"
   },
   {
     "title": "Prisoner of Love",
