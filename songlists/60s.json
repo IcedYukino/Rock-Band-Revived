@@ -1,4 +1,84 @@
 [
+{
+    "title": "Daddy, Daddy What is Heaven Like?",
+    "artist": "Tiny Tim",
+    "album": "God Bless Tiny Tim",
+    "year": 1968,
+    "genre": "Classic Rock",
+    "cover": "covers/tinytimgodblesstinytim.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
+    "title": "Groovin'",
+    "artist": "The Young Rascals",
+    "album": "Groovin'",
+    "year": 1967,
+    "genre": "Classic Rock",
+    "cover": "covers/theyoungrascalsgroovin.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
+    "title": "Like to Get to Know You",
+    "artist": "Spanky & Our Gang",
+    "album": "Like to Get to Know You",
+    "year": 1967,
+    "genre": "Classic Rock",
+    "cover": "covers/spanky&ourgangliketogettoknowyou.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
+    "title": "Never My Love",
+    "artist": "The Association",
+    "album": "Insight Out",
+    "year": 1967,
+    "genre": "Classic Rock",
+    "cover": "covers/theassociationinsightout.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
   {
     "title": "Song to the Magic Frog",
     "artist": "Sagittarius",
@@ -17,6 +97,26 @@
       "prokeys": 0,
       "drums": 0,
       "vocals": 0
-    }
-    }
-    ]
+  }
+  },
+  {
+    "title": "Technicolour Dream",
+    "artist": "The Alan Bown",
+    "album": "Outward Bown",
+    "year": 1968,
+    "genre": "Classic Rock",
+    "cover": "covers/thealanbownoutwardbown.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  }
+  ]
