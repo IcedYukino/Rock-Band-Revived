@@ -31,12 +31,8 @@ async function loadSongs(tab){
 
     let files = [];
 
-    if(tab === "gh") files = ["guitarhero"];
-    else if(tab === "gh2") files = ["guitarhero2"];
-    else if(tab === "ghwor") files = ["guitarherowarriorsofrock"];
-    else if(tab === "ghwordlc") files = ["guitarherowarriorsofrockdlc"];
-    else if(tab === "rb1dlc") files = ["rockbanddlc"];
-    else if(tab === "fnf") files = ["fortnitefestival"];
+    if(tab === "60s") files = ["60s"];
+    else if(tab === "70s") files = ["70s"];
     else if(tab === "all"){
 
         try{
@@ -234,12 +230,7 @@ function openSongInfo(song){
     `;
 
     const sourceNames = {
-        gh: "Guitar Hero",
-        gh2: "Guitar Hero II",
-        ghwor: "Guitar Hero: Warriors of Rock",
-        ghwordlc: "GH: Warriors of Rock DLC",
-        rb1dlc: "Rock Band DLC",
-        fnf: "Fortnite Festival"
+        60s: "The 60s"
     };
 
     const sourceName = sourceNames[song.category] || "";
@@ -263,7 +254,7 @@ ${song.category ? `<img class="source-icon" src="./assets/${song.category}.png">
 
     let charter = song.charter || "";
 
-    if(["gh","gh2","rb1dlc","fnf"].includes(song.category)){
+    if(["60","70s"].includes(song.category)){
         charter = `<span style="color:#0078ff">Harmonix</span>`;
     }
 
