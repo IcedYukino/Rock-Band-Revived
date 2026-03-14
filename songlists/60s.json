@@ -118,14 +118,14 @@
       "drums": 0,
       "vocals": 0
   }
-  },
+  },    
   {
-    "title": "Red Rubber Ball",
-    "artist": "The Cyrkle",
-    "album": "Red Rubber Ball",
-    "year": 1966,
+    "title": "Over You",
+    "artist": "Gary Puckett & The Union Gap",
+    "album": "Incredible",
+    "year": 1968,
     "genre": "Classic Rock",
-    "cover": "covers/thecyrkleredrubberball.png",
+    "cover": "covers/garypuckett&theuniongapincredible.png",
     "category": "60s",
     "rating": "FF",
     "difficulty": {
