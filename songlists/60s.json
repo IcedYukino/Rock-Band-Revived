@@ -1,5 +1,25 @@
 [
 {
+    "title": "Claustrophobia",
+    "artist": "Bee Gees",
+    "album": "The Bee Gees Sing and Play 14 Barry Gibb Songs",
+    "year": 1965,
+    "genre": "Classic Rock",
+    "cover": "covers/beegeesthebeegeessingandplay14barrygibbsongs.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
     "title": "Daddy, Daddy What is Heaven Like?",
     "artist": "Tiny Tim",
     "album": "God Bless Tiny Tim",
