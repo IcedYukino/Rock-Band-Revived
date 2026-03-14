@@ -1,5 +1,25 @@
 [
 {
+    "title": "59th Street Bridge Song (Feelin' Groovy)",
+    "artist": "Harpers Bizarre",
+    "album": "Feelin' Groovy",
+    "year": 1967,
+    "genre": "Classic Rock",
+    "cover": "covers/harpersbizarrefeelingroovy.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
     "title": "Claustrophobia",
     "artist": "Bee Gees",
     "album": "The Bee Gees Sing and Play 14 Barry Gibb Songs",
@@ -120,6 +140,26 @@
   }
   },
   {
+    "title": "She May Call You Up Tonight",
+    "artist": "The Left Banke",
+    "album": "Walk Away Renée/Pretty Ballerina",
+    "year": 1967,
+    "genre": "Classic Rock",
+    "cover": "covers/walkawayrenéeprettyballerina.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 1,
+      "vocals": 0
+  }
+  },
+  {
     "title": "Song to the Magic Frog",
     "artist": "Sagittarius",
     "album": "Present Tense",
@@ -146,6 +186,26 @@
     "year": 1968,
     "genre": "Classic Rock",
     "cover": "covers/thealanbownoutwardbown.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
+    "title": "Young Girl",
+    "artist": "Gary Puckett & The Union Gap",
+    "album": "Gary Puckett & The Union Gap Featuring Young Girl",
+    "year": 1968,
+    "genre": "Classic Rock",
+    "cover": "covers/garypuckett&theuniongapgarypuckett&theuniongapfeaturingyounggirl.png",
     "category": "60s",
     "rating": "FF",
     "difficulty": {
