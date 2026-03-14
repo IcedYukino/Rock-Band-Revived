@@ -80,6 +80,26 @@
   }
   },
   {
+    "title": "Red Rubber Ball",
+    "artist": "The Cyrkle",
+    "album": "Red Rubber Ball",
+    "year": 1966,
+    "genre": "Classic Rock",
+    "cover": "covers/thecyrkleredrubberball.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": 0,
+      "proguitar": 0,
+      "bass": 0,
+      "probass": 0,
+      "keys": 0,
+      "prokeys": 0,
+      "drums": 0,
+      "vocals": 0
+  }
+  },
+  {
     "title": "Song to the Magic Frog",
     "artist": "Sagittarius",
     "album": "Present Tense",
