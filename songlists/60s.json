@@ -139,6 +139,26 @@
       "vocals": -1
   }
   },
+  {  
+    "title": "Red Rubber Ball",
+    "artist": "The Cyrkle",
+    "album": "Red Rubber Ball",
+    "year": 1966,
+    "genre": "Classic Rock",
+    "cover": "covers/thecyrkleredrubberball.png",
+    "category": "60s",
+    "rating": "FF",
+    "difficulty": {
+      "guitar": -1,
+      "proguitar": -1,
+      "bass": -1,
+      "probass": -1,
+      "keys": -1,
+      "prokeys": -1,
+      "drums": -1,
+      "vocals": -1
+  }
+  },  
   {
     "title": "She May Call You Up Tonight",
     "artist": "The Left Banke",
